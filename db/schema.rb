@@ -52,12 +52,12 @@ ActiveRecord::Schema.define(version: 2021_11_23_141328) do
     t.float "total_value"
     t.float "amount_tax_free"
     t.bigint "user_id", null: false
-    t.bigint "currency1_id", null: false
-    t.bigint "currency2_id", null: false
+    t.bigint "start_currency_id", null: false
+    t.bigint "end_currency_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["currency1_id"], name: "index_trades_on_currency1_id"
-    t.index ["currency2_id"], name: "index_trades_on_currency2_id"
+    t.index ["end_currency_id"], name: "index_trades_on_end_currency_id"
+    t.index ["start_currency_id"], name: "index_trades_on_start_currency_id"
     t.index ["user_id"], name: "index_trades_on_user_id"
   end
 
@@ -91,8 +91,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_141328) do
   add_foreign_key "conversations", "users", column: "user2_id"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
-  add_foreign_key "trades", "currencies", column: "currency1_id"
-  add_foreign_key "trades", "currencies", column: "currency2_id"
+  add_foreign_key "trades", "currencies", column: "end_currency_id"
+  add_foreign_key "trades", "currencies", column: "start_currency_id"
   add_foreign_key "trades", "users"
   add_foreign_key "user_currencies", "currencies"
   add_foreign_key "user_currencies", "users"

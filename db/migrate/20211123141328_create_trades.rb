@@ -10,8 +10,8 @@ class CreateTrades < ActiveRecord::Migration[6.1]
       t.float :total_value
       t.float :amount_tax_free
       t.references :user, null: false, foreign_key: true
-      t.references :currency1, foreign_key: { to_table: :currencies }, null: false
-      t.references :currency2, foreign_key: { to_table: :currencies }, null: false
+      t.references :start_currency, foreign_key: { to_table: :currencies }, null: false
+      t.references :end_currency, foreign_key: { to_table: :currencies }, null: false
 
       t.timestamps
     end
