@@ -1,0 +1,8 @@
+<h1 class="text-center">All users</h1>
+<div class="container">
+<ul>
+    <% @users.each do |user| %>
+      <li> Username: <%= user.username %> Score: <%= user.score %></li>
+    <% end %>
+</ul>
+</div>
