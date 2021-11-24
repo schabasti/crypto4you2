@@ -60,22 +60,22 @@ puts "Creating conversations..."
 
 chat_luis_finn = Conversation.new
 chat_luis_finn.user1 = finn
-chat_luis_finn.user = luis
+chat_luis_finn.user2 = luis
 chat_luis_finn.save!
 
 chat_luis_marcus = Conversation.new
 chat_luis_marcus.user1 = marcus
-chat_luis_marcus.user = luis
+chat_luis_marcus.user2 = luis
 chat_luis_marcus.save!
 
 chat_sebastian_marcus = Conversation.new
 chat_sebastian_marcus.user1 = marcus
-chat_sebastian_marcus.user = sebastian
+chat_sebastian_marcus.user2 = sebastian
 chat_sebastian_marcus.save!
 
 chat_sebastian_finn = Conversation.new
 chat_sebastian_finn.user1 = finn
-chat_sebastian_finn.user = sebastian
+chat_sebastian_finn.user2 = sebastian
 chat_sebastian_finn.save!
 
 puts "Creating messages..."
@@ -249,7 +249,7 @@ trade1.price = 615.53
 trade1.volume = 10.56
 trade1.income_tax = 0
 trade1.tax_rate = 0.25
-trade1.total_value = 6500.00
+trade1.total_value = 6_500.00
 trade1.amount_tax_free = 0
 trade1.user = sebastian
 trade1.start_currency = euro
@@ -295,7 +295,7 @@ trade4.total_value = 728.28
 trade4.amount_tax_free = 0
 trade4.user = sebastian
 trade4.start_currency = euro
-trade4.end_currency = ethereum
+trade4.end_currency = dogecoin
 trade4.save!
 
 trade5 = Trade.new
@@ -305,9 +305,67 @@ trade5.price = 615.53
 trade5.volume = 3.14
 trade5.income_tax = 0
 trade5.tax_rate = 0.25
-trade5.total_value = 5100.32
+trade5.total_value = 5_100.32
 trade5.amount_tax_free = 0
 trade5.user = luis
 trade5.start_currency = euro
 trade5.end_currency = bitcoin
 trade5.save!
+
+trade6 = Trade.new
+trade6.date = "2021-01-04"
+trade6.type_of_trade = "buy"
+trade6.price = 1_050.53
+trade6.volume = 15.67
+trade6.income_tax = 0
+trade6.tax_rate = 0.25
+trade6.total_value = 16_453.50
+trade6.amount_tax_free = 0
+trade6.user = luis
+trade6.start_currency = euro
+trade6.end_currency = ethereum
+trade6.save!
+
+trade7 = Trade.new
+trade7.date = "2021-11-21"
+trade7.type_of_trade = "sell"
+trade7.price = 4_307.53
+trade7.volume = 7
+trade7.income_tax = 7_538.18
+trade7.tax_rate = 0.25
+trade7.total_value = 30_152.71
+trade7.amount_tax_free = 8.67
+trade7.user = luis
+trade7.start_currency = ethereum
+trade7.end_currency = euro
+trade7.save!
+
+trade8 = Trade.new
+trade8.date = "2021-10-09"
+trade8.type_of_trade = "buy"
+trade8.price = 3_215.08
+trade8.volume = 1.31
+trade8.income_tax = 0
+trade8.tax_rate = 0.25
+trade8.total_value = 4_211.75
+trade8.amount_tax_free = 0
+trade8.user = marcus
+trade8.start_currency = euro
+trade8.end_currency = ethereum
+trade8.save!
+
+trade9 = Trade.new
+trade9.date = "2021-10-09"
+trade9.type_of_trade = "buy"
+trade9.price = 45_529.08
+trade9.volume = 0.74
+trade9.income_tax = 0
+trade9.tax_rate = 0.25
+trade9.total_value = 33_691.52
+trade9.amount_tax_free = 0
+trade9.user = marcus
+trade9.start_currency = euro
+trade9.end_currency = bitcoin
+trade9.save!
+
+puts "Seeding finished"
