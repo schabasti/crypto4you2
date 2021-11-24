@@ -1,4 +1,17 @@
-<h1>My Trades</h1>
-<% @trades.each do |trade| %>
-  <%= trade.volume %> of <%= trade.start_currency.name %>
-<%end  %>
+<h1 class="text-center">My Trades</h1>
+  <div class="card">
+    <ul>
+      <% @trades.each do |trade| %>
+      <li> <%= trade.volume %> of <%= trade.start_currency.name %></li>
+      <%end  %>
+    </ul>
+
+  </div>
+
+  <div class="card">
+    <div class="chart">
+      <% @trades.each do |trade| %>
+        <%= trade.end_currency.name %>
+      <%end  %>
+    </div>
+  </div>
