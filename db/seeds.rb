@@ -1,3 +1,4 @@
+require 'open-uri'
 # Destroying databases
 puts "Destroying databases..."
 
@@ -18,8 +19,8 @@ finn.username = "finnerdmann"
 finn.score = 350
 finn.ledger_address = "LTAQ2F-HV3UG-0PO1ZC"
 finn.bio = "Crypto enthusiast with a nodge for risky coins #dogecoin #tothemoon"
-# finn_picture = URI.open('https://kitt.lewagon.com/placeholder/users/jfcerdmann')
-# finn.photo.attach(io: finn_picture, filename: 'nes.png', content_type: 'image/png')
+finn_picture = URI.open('https://kitt.lewagon.com/placeholder/users/jfcerdmann')
+finn.photo.attach(io: finn_picture, filename: 'nes.png', content_type: 'image/png')
 finn.save!
 
 luis = User.new
@@ -29,8 +30,8 @@ luis.username = "luiskohl"
 luis.score = 460
 luis.ledger_address = "L1Y2PL-Q42WJ-Q19IUP"
 luis.bio = "I've been investing in crypto since four years and am open to help anyone who is new to this amazing world #eth"
-# luis_picture = URI.open('https://kitt.lewagon.com/placeholder/users/code7756221432')
-# luis.photo.attach(io: luis_picture, filename: 'nes.png', content_type: 'image/png')
+luis_picture = URI.open('https://kitt.lewagon.com/placeholder/users/code7756221432')
+luis.photo.attach(io: luis_picture, filename: 'nes.png', content_type: 'image/png')
 luis.save!
 
 sebastian = User.new
@@ -40,8 +41,8 @@ sebastian.username = "sebastianburkhardt"
 sebastian.score = 520
 sebastian.ledger_address = "LU1O3E-C2AF5-TZ5P6A"
 sebastian.bio = "Experienced crypto trader with profain knowledge about Ethereum and some Bitcoin basics"
-# sebastian_picture = URI.open('https://kitt.lewagon.com/placeholder/users/schabasti')
-# sebastian.photo.attach(io: sebastian_picture, filename: 'nes.png', content_type: 'image/png')
+sebastian_picture = URI.open('https://kitt.lewagon.com/placeholder/users/schabasti')
+sebastian.photo.attach(io: sebastian_picture, filename: 'nes.png', content_type: 'image/png')
 sebastian.save!
 
 marcus = User.new
@@ -51,8 +52,8 @@ marcus.username = "marcuswrede"
 marcus.score = 195
 marcus.ledger_address = "LAR4MS-QW4UT-J13L7D"
 marcus.bio = "Relatively new to the world of crypto and looking for more serious investment opportunities"
-# marcus_picture = URI.open('https://kitt.lewagon.com/placeholder/users/wredemarcus')
-# marcus.photo.attach(io: marcus_picture, filename: 'nes.png', content_type: 'image/png')
+marcus_picture = URI.open('https://kitt.lewagon.com/placeholder/users/wredemarcus')
+marcus.photo.attach(io: marcus_picture, filename: 'nes.png', content_type: 'image/png')
 marcus.save!
 
 # Seeding Conversations and messages
