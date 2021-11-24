@@ -119,3 +119,47 @@ message_luis_marcus2.content = "Hello Luis, that is super nice. Thanks! At the m
 message_luis_marcus2.user = marcus
 message_luis_marcus2.conversation = chat_luis_marcus
 message_luis_marcus2.save!
+
+# Chat Sebastian/Marcus
+message_sebastian_marcus1 = Message.new
+message_sebastian_marcus1.content = "Morning Sebastian, I saw that you are an expert in Ethereum. I am super interested in it and would like to understand more about the technology behind it. Could you tell me a bit about it?"
+message_sebastian_marcus1.user = marcus
+message_sebastian_marcus1.conversation = chat_sebastian_marcus
+message_sebastian_marcus1.save!
+
+message_sebastian_marcus2 = Message.new
+message_sebastian_marcus2.content = "Sure thing! Ethereum is a blockchain platform with its own cryptocurrency, called Ether (ETH) or Ethereum, and its own programming language, called Solidity. As a blockchain network, Ethereum is a decentralized public ledger for verifying and recording transactions. The network's users can create, publish, monetize, and use applications on the platform, and use its Ether cryptocurrency as payment. Insiders call the decentralized applications on the network 'dApps'. As a cryptocurrency, Ethereum is second in market value only to Bitcoin, as of May 2021. If you want to learn more about it, check out https://www.investopedia.com/terms/e/ethereum.asp"
+message_sebastian_marcus2.user = sebastian
+message_sebastian_marcus2.conversation = chat_sebastian_marcus
+message_sebastian_marcus2.save!
+
+message_sebastian_marcus3 = Message.new
+message_sebastian_marcus3.content = "Thank you!! That was super helpful to understand a bit more. If I have more questions later on, can I come back to you again or maybe even have a video call?"
+message_sebastian_marcus3.user = marcus
+message_sebastian_marcus3.conversation = chat_sebastian_marcus
+message_sebastian_marcus3.save!
+
+message_sebastian_marcus4 = Message.new
+message_sebastian_marcus4.content = "Yes surely! Let's have a call on Friday"
+message_sebastian_marcus4.user = sebastian
+message_sebastian_marcus4.conversation = chat_sebastian_marcus
+message_sebastian_marcus4.save!
+
+# Chat Sebastian/Finn
+message_finn_sebastian1 = Message.new
+message_finn_sebastian1.content = "Just texting you to tell you that dogecoin took a huge dive yesterday after Elon's tweet"
+message_finn_sebastian1.user = sebastian
+message_finn_sebastian1.conversation = chat_sebastian_finn
+message_finn_sebastian1.save!
+
+message_finn_sebastian2 = Message.new
+message_finn_sebastian2.content = "Yes I saw. So frustrating but I am still hopeful #tothemooooon 🌑🚀"
+message_finn_sebastian2.user = finn
+message_finn_sebastian2.conversation = chat_sebastian_finn
+message_finn_sebastian2.save!
+
+message_finn_sebastian3 = Message.new
+message_finn_sebastian3.content = "Haha I'd love to have your optimism. Good luck!"
+message_finn_sebastian3.user = sebastian
+message_finn_sebastian3.conversation = chat_sebastian_finn
+message_finn_sebastian3.save!
