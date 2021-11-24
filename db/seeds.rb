@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 # Destroying databases
 puts "Destroying databases..."
 
@@ -246,3 +238,48 @@ marcus_bitcoin.amount = 0.74
 marcus_bitcoin.user = marcus
 marcus_bitcoin.currency = bitcoin
 marcus_bitcoin.save!
+
+# Seeding trades
+puts "Creating trades..."
+
+trade1 = Trade.new
+trade1.date = "2017-05-04"
+trade1.type_of_trade = "buy"
+trade1.price = 615.53
+trade1.volume = 10.56
+trade1.income_tax = 0
+trade1.tax_rate = 0.25
+trade1.total_value = 6500.00
+trade1.amount_tax_free = 0
+trade1.user = sebastian
+trade1.start_currency = euro
+trade1.end_currency = bitcoin
+trade1.save!
+
+trade2 = Trade.new
+trade2.date = "2019-10-12"
+trade2.type_of_trade = "sell"
+trade2.price = 43_896.20
+trade2.volume = 3.42
+trade2.income_tax = 0
+trade2.tax_rate = 0.25
+trade2.total_value = 150_125.00
+trade2.amount_tax_free = 7.14
+trade2.user = sebastian
+trade2.start_currency = bitcoin
+trade2.end_currency = euro
+trade2.save!
+
+trade3 = Trade.new
+trade3.date = "2021-04-16"
+trade3.type_of_trade = "buy"
+trade3.price = 43_896.30
+trade3.volume = 3.43
+trade3.income_tax = 37_531.35
+trade3.tax_rate = 0.35
+trade3.total_value = 150_135.00
+trade3.amount_tax_free = 113_593.75
+trade3.user = sebastian
+trade3.start_currency = euro
+trade3.end_currency = ethereum
+trade3.save!
