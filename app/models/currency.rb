@@ -6,6 +6,5 @@ class Currency < ApplicationRecord
     foreign_key: :end_currency_id
 
   validates :name, presence: true
-  validates :is_crypto, presence: true
   validates :description, presence: true
 end

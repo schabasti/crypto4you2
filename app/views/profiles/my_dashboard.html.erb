@@ -1,0 +1,4 @@
+<h1>My Trades</h1>
+<% @trades.each do |trade| %>
+  <%= trade.volume %> of <%= trade.start_currency.name %>
+<%end  %>
