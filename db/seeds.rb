@@ -369,4 +369,3 @@ trade9.end_currency = bitcoin
 trade9.save!
 
 puts "Seeding finished"
-
