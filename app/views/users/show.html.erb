@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <h2 class="text-center"> <%= @user.username %>'s Page </h2>
+    <div class="card">
+      <div class="container">
+        <strong> ⭐️ Score: <%= @user.score %></strong> <small>Ledger:<%= @user.ledger_address %></small>
+        <br>
+        <%= @user.bio %>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h4>Recent Messages</h4>
+    <div class="card">
+      <% @user.messages.each do |message|%>
+        <small>
+        <strong> <%= message.user.username%> </strong>
+          <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
+        </small>
+        <%= message.content %>
+      <%end %>
+    </div>
+</div>
