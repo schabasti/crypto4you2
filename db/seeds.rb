@@ -273,13 +273,41 @@ trade2.save!
 trade3 = Trade.new
 trade3.date = "2021-04-16"
 trade3.type_of_trade = "buy"
-trade3.price = 43_896.30
-trade3.volume = 3.43
-trade3.income_tax = 37_531.35
-trade3.tax_rate = 0.35
-trade3.total_value = 150_135.00
-trade3.amount_tax_free = 113_593.75
+trade3.price = 1_900.87
+trade3.volume = 5.31
+trade3.income_tax = 0
+trade3.tax_rate = 0.25
+trade3.total_value = 10_093.62
+trade3.amount_tax_free = 0
 trade3.user = sebastian
 trade3.start_currency = euro
 trade3.end_currency = ethereum
 trade3.save!
+
+trade4 = Trade.new
+trade4.date = "2021-08-21"
+trade4.type_of_trade = "buy"
+trade4.price = 0.84
+trade4.volume = 867.89
+trade4.income_tax = 0
+trade4.tax_rate = 0.25
+trade4.total_value = 728.28
+trade4.amount_tax_free = 0
+trade4.user = sebastian
+trade4.start_currency = euro
+trade4.end_currency = ethereum
+trade4.save!
+
+trade5 = Trade.new
+trade5.date = "2019-05-04"
+trade5.type_of_trade = "buy"
+trade5.price = 615.53
+trade5.volume = 3.14
+trade5.income_tax = 0
+trade5.tax_rate = 0.25
+trade5.total_value = 5100.32
+trade5.amount_tax_free = 0
+trade5.user = luis
+trade5.start_currency = euro
+trade5.end_currency = bitcoin
+trade5.save!
