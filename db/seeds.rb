@@ -9,12 +9,12 @@
 # Destroying databases
 puts "Destroying databases..."
 
-Conversation.destroy_all
-Currencie.destroy_all
-Message.destroy_all
-Trade.destroy_all
-UserCurrencie.destroy_all
 User.destroy_all
+Conversation.destroy_all
+Message.destroy_all
+Currency.destroy_all
+UserCurrency.destroy_all
+Trade.destroy_all
 
 # Seeding users
 puts "Creating users..."
@@ -163,3 +163,86 @@ message_finn_sebastian3.content = "Haha I'd love to have your optimism. Good luc
 message_finn_sebastian3.user = sebastian
 message_finn_sebastian3.conversation = chat_sebastian_finn
 message_finn_sebastian3.save!
+
+# Seeding currencies
+puts "Creating currencies..."
+
+dollar = Currency.new
+dollar.name = "US-Dollar"
+dollar.description = "The United States dollar, or U.S. dollar, is made up of 100 cents. It is represented by the symbol $ or US$ to differentiate it from other dollar-based currencies. The U.S. dollar is considered a benchmark currency and is the most-used currency in transactions across the world."
+dollar.is_crypto = false
+dollar.save!
+
+euro = Currency.new
+euro.name = "Euro"
+euro.description = "The euro is the official currency of 19 member nations of the European Economic and Monetary Union (EMU), or EU, which is comprised of 27 member nations."
+euro.is_crypto = false
+euro.save!
+
+bitcoin = Currency.new
+bitcoin.name = "Bitcoin"
+bitcoin.description = "Bitcoin is a decentralized digital currency created in January 2009. Bitcoin is known as a type of cryptocurrency because it uses cryptography to keep it secure. There are no physical bitcoins, only balances kept on a public ledger that everyone has transparent access to (although each record is encrypted)."
+bitcoin.is_crypto = true
+bitcoin.save!
+
+ethereum = Currency.new
+ethereum.name = "Ethereum"
+ethereum.description = "Ethereum is a blockchain platform with its own cryptocurrency, called Ether (ETH) or Ethereum, and its own programming language, called Solidity. As a blockchain network, Ethereum is a decentralized public ledger for verifying and recording transactions. The network's users can create, publish, monetize, and use applications on the platform, and use its Ether cryptocurrency as payment. Insiders call the decentralized applications on the network 'dApps'. As a cryptocurrency, Ethereum is second in market value only to Bitcoin, as of May 2021."
+ethereum.is_crypto = true
+ethereum.save!
+
+dogecoin = Currency.new
+dogecoin.name = "Dogecoin"
+dogecoin.description = "Dogecoin (DOGE) is a peer-to-peer, open-source cryptocurrency. It is considered an altcoin and an almost sarcastic meme coin. While it was created seemingly as a joke, Dogecoin's blockchain still has merit. Its underlying technology is derived from Litecoin."
+dogecoin.is_crypto = true
+dogecoin.save!
+
+puts "Creating user currencies..."
+
+finn_dogecoin = UserCurrency.new
+finn_dogecoin.amount = 1129.17
+finn_dogecoin.user = finn
+finn_dogecoin.currency = dogecoin
+finn_dogecoin.save!
+
+luis_ethereum = UserCurrency.new
+luis_ethereum.amount = 8.67
+luis_ethereum.user = luis
+luis_ethereum.currency = ethereum
+luis_ethereum.save!
+
+luis_bitcoin = UserCurrency.new
+luis_bitcoin.amount = 3.14
+luis_bitcoin.user = luis
+luis_bitcoin.currency = bitcoin
+luis_bitcoin.save!
+
+sebastian_ethereum = UserCurrency.new
+sebastian_ethereum.amount = 5.31
+sebastian_ethereum.user = sebastian
+sebastian_ethereum.currency = ethereum
+sebastian_ethereum.save!
+
+sebastian_bitcoin = UserCurrency.new
+sebastian_bitcoin.amount = 7.14
+sebastian_bitcoin.user = sebastian
+sebastian_bitcoin.currency = bitcoin
+sebastian_bitcoin.save!
+
+sebastian_dogecoin = UserCurrency.new
+sebastian_dogecoin.amount = 867.89
+sebastian_dogecoin.user = sebastian
+sebastian_dogecoin.currency = dogecoin
+sebastian_dogecoin.save!
+
+marcus_ethereum = UserCurrency.new
+marcus_ethereum.amount = 1.31
+marcus_ethereum.user = marcus
+marcus_ethereum.currency = ethereum
+marcus_ethereum.save!
+
+marcus_bitcoin = UserCurrency.new
+marcus_bitcoin.amount = 0.74
+marcus_bitcoin.user = marcus
+marcus_bitcoin.currency = bitcoin
+marcus_bitcoin.save!
