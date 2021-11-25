@@ -12,4 +12,11 @@ class Trade < ApplicationRecord
   validates :total_value, presence: true
   validates :amount_tax_free, presence: true
 
+  after_create :calculate_user_score
+
+  private
+
+  def calculate_user_score
+    user.calculate_score
+  end
 end
