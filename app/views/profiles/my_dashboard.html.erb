@@ -3,7 +3,7 @@
   <br>
   <br>
     <div class="dashboard-left">
-      <h2 class="text-center"> Hi <%= current_user.username %>, welcome back!</h2>
+      <h2 > Hi <%= current_user.username %>, welcome back!</h2>
       <div class="dashboard-left-overview-charts">
         <div class="dashboard-left-overview">
           <h3 class="text-center">Trade Overview</h3>
@@ -31,7 +31,7 @@
                  "datasets": [{ "label": "My First Trades",
                  "backgroundColor": "transparent",
                  "borderColor": "#3B82F6",
-                 "data": [37, 83, 78, 54, 65] }] }'
+                 "data": [53, 68, 78, 56, 65] }] }'
             ></canvas>
           </div>
         </div>
@@ -41,7 +41,7 @@
           <%= link_to "Upload File", root_path, class: "btn btn-secondary" %>
         </div>
         <div class="trades-and-taxes">
-          <%= link_to "Your Trades and Taxes", root_path, class: "btn btn-secondary" %>
+          <%= link_to "Your Trades and Taxes", trades_path, class: "btn btn-secondary" %>
         </div>
       </div>
     </div>
@@ -53,22 +53,17 @@
           <hr>
         </div>
         <div class="container">
-        Recent Activity:
-          <% if @messages %>
-          <% @messages.each do |message|%>
-          <small>
-          <strong> <%= message.user.username%> </strong>
-          <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
-          </small>
-          <%= message.content %>
+        Recent User-Interaction:
+        <ul>
+          <% User.all.each do |user|%>
+          <hr>
+          <li><strong> <%= link_to user.username, user_path(user) %></strong></li>
           <% end  %>
-          <%else  %>
-          No recent messages
-          <% end  %>
-        <hr>
+          <hr>
+        </ul>
         </div>
         <div class="text-center">
-        <%= link_to "View More", user_path(current_user), class: "btn btn-secondary" %>
+        <%= link_to "View More", users_path(:id), class: "btn btn-secondary" %>
         </div>
       </div>
     </div>
