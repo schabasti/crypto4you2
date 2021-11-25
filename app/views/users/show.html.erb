@@ -10,9 +10,11 @@
     </div>
     <br>
     <br>
-    <h4>Recent Messages</h4>
+    <h4>Your chat</h4>
     <div class="card">
-      <% if @messages.any? %>
+      <% if @user == current_user %>
+        <p> Welcome to your own page</p>
+      <% elsif @messages.any? %>
         <% @messages.each do |message|%>
           <small>
           <strong> <%= message.user.username%> </strong>
@@ -25,3 +27,6 @@
       <% end %>
     </div>
 </div>
+
+<%# when you send a message -> messages_controler#create (nested in user) %>
+<%# sender= current_user, recipient = @user, conversation between those two / conversation.create if none existing %>
