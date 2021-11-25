@@ -11,11 +11,8 @@ class MessagesController < ApplicationController
   def create
     @message = @conversation.messages.new(message_params)
     @message.user = current_user
-    if @message.save
-      redirect_to user_path(@user)
-    else
-      redirect_to user_path(@user)
-    end
+    @message.save
+    redirect_to user_path(@user)
   end
 
   private
