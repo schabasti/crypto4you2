@@ -1,7 +1,14 @@
 .navbar-lewagon {
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background:  #181C1F;
+  border-bottom: 1px solid #878B93;
+  padding: 0px 50px;
+
+  a.nav-link {
+    font-size: 18px;
+    color: white;
+  }
 
   .navbar-collapse {
     flex-grow: 0;
@@ -11,8 +18,7 @@
     height: 50px;
     width: 125px;
   }
-
-  a {
-    font-size: 18px;
-  }
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white;
 }

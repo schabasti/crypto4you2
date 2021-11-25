@@ -10,14 +10,18 @@
     </div>
     <br>
     <br>
-    <h4>Recent Messages</h4>
-    <div class="card">
-      <% @user.messages.each do |message|%>
-        <small>
-        <strong> <%= message.user.username%> </strong>
-          <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
-        </small>
-        <%= message.content %>
-      <%end %>
-    </div>
+    <% if @user != current_user %>
+      <%= render 'chat' %>
+    <% else %>
+      <h4>Look at your beautiful page</h4>
+      <div class="card">
+        <p>This is your own page</p>
+      </div>
+    <% end %>
 </div>
+<br>
+<br>
+
+
+<%# when you send a message -> messages_controler#create (nested in user) %>
+<%# sender= current_user, recipient = @user, conversation between those two / conversation.create if none existing %>

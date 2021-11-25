@@ -10,4 +10,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :photo
+
+  def calculate_score
+    new_score = trades.sum do
+      rand(30..49)
+    end
+    update(score: new_score)
+  end
 end

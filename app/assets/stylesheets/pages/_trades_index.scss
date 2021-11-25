@@ -1,0 +1,28 @@
+.content-container {
+  background-color: #181C1F;
+}
+
+h1 {
+  color: white;
+  font-family: PT Serif;
+}
+
+.container {
+  color: #383D41;
+
+  .row {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .trade-card {
+    padding: auto;
+    background-color:  #548E89;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .col-6 {
+    text-align: center;
+  }
+}
