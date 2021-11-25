@@ -1,13 +1,18 @@
 <div>
+<body style=“background-color:powderblue;“>
   <br>
   <h1 class="text-center">Your trade overview</h1>
   <br>
   <br>
   <div class="container">
-    <ul>
-      <% @trades.each do |trade| %>
-        <li>Date: <%= trade.date %> | <%=trade.start_currency.name %> to <%= trade.end_currency.name %> | Price: <%= trade.price%> | Volume: <%= trade.volume %> | Total Value: <%= trade.total_value%>| Amount Tax Free: <%= trade.amount_tax_free %></li>
-      <% end %>
-    </ul>
+    <div class="row">
+        <% @trades.each do |trade| %>
+         <div class="col-6">
+         <div class="trade-card">
+            Date: <%= trade.date %> | <%=trade.start_currency.name %> to <%= trade.end_currency.name %> | Price: <%= trade.price%> | Volume: <%= trade.volume %> | Total Value: <%= trade.total_value%>| Amount Tax Free: <%= trade.amount_tax_free %>
+         </div>
+        </div>
+        <% end %>
+    </div>
   </div>
 </div>
