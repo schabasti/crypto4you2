@@ -1,0 +1,56 @@
+<div class="content">
+  <br>
+  <br>
+  <h2 class="greeter"> Hi <%= current_user.username %>, welcome back!</h2>
+  <br>
+    <div class="card">
+      <div class="card-overview">
+        <h3 class="text-center">Trade Overview</h3>
+        <ul>
+          <hr>
+          <% @trades.each do |trade| %>
+          <li> <%= trade.date %> | <%= trade.volume %> of <%= trade.start_currency.name %></li>
+          <hr>
+          <%end  %>
+        </ul>
+        <div class="text-center">
+          <%= link_to "View More", trade_path(current_user), class: "btn btn-secondary" %>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header-date">
+        <h3>Portfolio Mix</h3>
+        <h6><%= Date.current%></h6>
+      </div>
+      <div class="card-chart">
+        <% @trades.each do |trade| %>
+          <%= trade.end_currency.name %>
+        <%end  %>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-profile">
+        <div class="card-profile-head">
+          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= current_user.username %>
+          <hr>
+        </div>
+        <div class="container">
+        Recent Activity:
+        <hr>
+        </div>
+        <%= link_to "View More", user_path(current_user), class: "btn btn-secondary" %>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-csv-upload">
+        <%= link_to "Upload File", root_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-trades-and-taxes">
+        <%= link_to "View Conversations", root_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+</div>
