@@ -1,0 +1,19 @@
+.card {
+  padding: 20px;
+  display: fleX;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 8px;
+  background-color: rgba(172, 163, 163, 0.377);
+  box-shadow: 12px;
+  width: fit-content;
+
+  .card-overview {
+    width: 400px;
+  }
+  .card-header-date {
+    justify-content: center;
+    align-items: center;
+  }
+}
