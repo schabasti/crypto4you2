@@ -1,35 +1,51 @@
-<div class="content">
+<div class="content-dashboard">
   <br>
   <br>
-  <h2 class="greeter"> Hi <%= current_user.username %>, welcome back!</h2>
   <br>
-    <div class="card">
-      <div class="card-overview">
-        <h3 class="text-center">Trade Overview</h3>
-        <ul>
-          <hr>
-          <% @trades.each do |trade| %>
-          <li> <%= trade.date %> | <%= trade.volume %> of <%= trade.start_currency.name %></li>
-          <hr>
-          <%end  %>
-        </ul>
-        <div class="text-center">
-          <%= link_to "View More", trade_path(current_user), class: "btn btn-secondary" %>
+    <div class="dashboard-left">
+      <h2 class="text-center"> Hi <%= current_user.username %>, welcome back!</h2>
+      <div class="dashboard-left-overview-charts">
+        <div class="dashboard-left-overview">
+          <h3 class="text-center">Trade Overview</h3>
+          <ul>
+            <hr>
+            <% @trades.each do |trade| %>
+            <li> <%= trade.date %> | <%= trade.volume %> of <%= trade.start_currency.name %></li>
+            <hr>
+            <%end  %>
+          </ul>
+          <div class="text-center">
+            <%= link_to "View More", trade_path(current_user), class: "btn btn-secondary" %>
+          </div>
+        </div>
+        <div class="dashboard-left-chart">
+          <div class="card-header-date">
+            <h3 class="text-center">Portfolio Mix</h3>
+            <h6 class="text-center"><%= Date.current%></h6>
+          </div>
+          <div class="card-chart">
+            <canvas
+              data-controller="chart"
+              data-chart-data-value='{
+                 "labels": ["Ethereum", "Bitcoin", "Solana", "Dogecoin", "Polkadot"],
+                 "datasets": [{ "label": "My First Trades",
+                 "backgroundColor": "transparent",
+                 "borderColor": "#3B82F6",
+                 "data": [37, 83, 78, 54, 65] }] }'
+            ></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard-left-csv-trades">
+        <div class="csv-upload">
+          <%= link_to "Upload File", root_path, class: "btn btn-secondary" %>
+        </div>
+        <div class="trades-and-taxes">
+          <%= link_to "Your Trades and Taxes", root_path, class: "btn btn-secondary" %>
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header-date">
-        <h3>Portfolio Mix</h3>
-        <h6><%= Date.current%></h6>
-      </div>
-      <div class="card-chart">
-        <% @trades.each do |trade| %>
-          <%= trade.end_currency.name %>
-        <%end  %>
-      </div>
-    </div>
-    <div class="card">
+    <div class="dashboard-right-profile">
       <div class="card-profile">
         <div class="card-profile-head">
           <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -38,19 +54,22 @@
         </div>
         <div class="container">
         Recent Activity:
+          <% if @messages %>
+          <% @messages.each do |message|%>
+          <small>
+          <strong> <%= message.user.username%> </strong>
+          <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
+          </small>
+          <%= message.content %>
+          <% end  %>
+          <%else  %>
+          No recent messages
+          <% end  %>
         <hr>
         </div>
+        <div class="text-center">
         <%= link_to "View More", user_path(current_user), class: "btn btn-secondary" %>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-csv-upload">
-        <%= link_to "Upload File", root_path, class: "btn btn-secondary" %>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-trades-and-taxes">
-        <%= link_to "View Conversations", root_path, class: "btn btn-secondary" %>
+        </div>
       </div>
     </div>
 </div>
