@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :messages, only: %i[create]
   end
   get 'profiles/my_dashboard'
+  get 'profiles/upload_csv'
 end
