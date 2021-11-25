@@ -1,0 +1,30 @@
+body {
+  background-color: #181C1F;
+}
+
+.upload-container {
+  text-align: center;
+  align-items: center;
+}
+
+.upload-card {
+  border: 1px solid white;
+  text-align: center;
+}
+
+
+.upload-card {
+  background-size: cover;
+  background-position: center;
+  background-color: #383D41;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

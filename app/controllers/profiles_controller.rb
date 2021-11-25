@@ -4,6 +4,6 @@ class ProfilesController < ApplicationController
   end
 
   def upload_csv
-
+    @new_trades = current_user.trades.new
   end
 end

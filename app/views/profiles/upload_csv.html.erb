@@ -1,0 +1,11 @@
+
+<div class="container upload-container">
+  <h1>Upload your CSV file</h1>
+  <div class="upload-card">
+    <%= simple_form_for @new_trades do |f| %>
+      <%= f.file_field :trades %>
+      <%= f.submit  %>
+    <% end %>
+  </div>
+  <i class="fas fa-plus"></i>
+</div>
