@@ -10,23 +10,33 @@
     </div>
     <br>
     <br>
-    <h4>Your chat</h4>
-    <div class="card">
-      <% if @user == current_user %>
-        <p> Welcome to your own page</p>
-      <% elsif @messages.any? %>
-        <% @messages.each do |message|%>
-          <small>
-          <strong> <%= message.user.username%> </strong>
-            <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
-          </small>
-          <%= message.content %>
-        <%end %>
-      <% else %>
-        <p> Start your conversation with <%= @user.username %> </p>
+    <% if @user != current_user %>
+      <h4>Your chat</h4>
+      <div class="card">
+        <% if @messages.any? %>
+          <% @messages.each do |message|%>
+            <small>
+            <strong> <%= message.user.username%> </strong>
+              <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
+            </small>
+            <%= message.content %>
+          <%end %>
+        <% else %>
+          <p> Start your conversation with <%= @user.username %> </p>
+        <% end %>
+        <%= simple_form_for [@user, @message] do |f| %>
+        <%= f.input :content, :label => false %>
+        <%= f.submit "Send Reply" %>
+        <% end %>
+       <% else %>
+        <h4>Look at your beautiful page</h4>
+        <div class="card">
+          <p>This is your own page</p>
+        </div>
       <% end %>
     </div>
 </div>
+
 
 <%# when you send a message -> messages_controler#create (nested in user) %>
 <%# sender= current_user, recipient = @user, conversation between those two / conversation.create if none existing %>
