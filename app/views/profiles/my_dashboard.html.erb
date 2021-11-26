@@ -47,15 +47,15 @@
           <%= current_user.username %>
           <hr>
         </div>
-        <div class="container">
-        Recent User-Interaction:
-        <ul>
-          <% User.all.each do |user|%>
-          <hr>
-          <li><strong> <%= link_to user.username, user_path(user) %></strong></li>
-          <% end  %>
-          <hr>
-        </ul>
+        <div class="container recent-users">
+          Recent User-Interaction:
+          <ul>
+            <% User.where.not(id: current_user.id).each do |user|%>
+            <hr>
+            <li> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </li>
+            <% end  %>
+            <hr>
+          </ul>
         </div>
         <div class="text-center">
         <%= link_to "View More", users_path(:id), class: "btn btn-success" %>
