@@ -1,0 +1,90 @@
+.content-container {
+  background-color: $background-color;
+}
+
+.content-dashboard {
+  display:flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 15px;
+  padding: 16px;
+}
+
+.dashboard-left {
+  color: $white-font-color;
+  border-radius: 8px;
+
+  .h2 {
+    text-align:left ;
+  }
+}
+
+.dashboard-left-overview-charts {
+  display:flex;
+  justify-content: center;
+
+  .dashboard-left-overview {
+    background-color: $card-color;
+    color: $white-font-color;
+    border-radius: 8px;
+    width: 30%;
+    padding: 16px;
+    margin-right: 10px;
+  }
+
+  .dashboard-left-chart {
+    background-color: $card-color;
+    color: $white-font-color;
+    border-radius: 8px;
+    width: 70%;
+    overflow:hidden;
+    padding: 16px;
+    margin-right: 10px;
+  }
+}
+
+.dashboard-left-csv-trades {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-right: 20px;
+
+  .csv-upload {
+    background-color: $card-color;
+    color: $white-font-color;
+    border-radius: 8px;
+    min-width: 50%;
+    padding: 16px;
+    margin-right: 10px;
+  }
+
+  .trades-and-taxes {
+    background-color: $card-color;
+    color: $white-font-color;
+    border-radius: 8px;
+    min-width: 50%;
+    padding: 16px;
+  }
+}
+
+.dashboard-right-profile {
+  border-radius: 8px;
+  margin-top: 10px;
+
+  .card-profile-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  .card-profile {
+    background-color: $card-color;
+    color: $white-font-color;
+    border-radius: 8px;
+    min-height: 100%;
+  }
+  .container {
+    color: $white-font-color;
+  }
+}
