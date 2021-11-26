@@ -26,12 +26,7 @@
           <div class="card-chart">
             <canvas
               data-controller="chart"
-              data-chart-data-value='{
-                 "labels": ["Ethereum", "Bitcoin", "Solana", "Dogecoin", "Polkadot"],
-                 "datasets": [{ "label": "My First Trades",
-                 "backgroundColor": "transparent",
-                 "borderColor": "#548E89",
-                 "data": [53, 68, 78, 56, 65] }] }'
+              data-chart-data-value="<%= @chart_data.to_json %>"
             ></canvas>
           </div>
         </div>
