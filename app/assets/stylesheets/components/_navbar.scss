@@ -5,9 +5,16 @@
   border-bottom: 1px solid #878B93;
   padding: 0px 50px;
 
-  a.nav-link {
+  .nav-link {
     font-size: 18px;
     color: white;
+    &:hover{
+      color: rgb(175, 175, 175) !important;
+    }
+  }
+
+  a.nav-link:hover {
+    opacity: white;
   }
 
   .navbar-collapse {
