@@ -5,11 +5,14 @@
   <br>
   <br>
   <div class="container">
-    <div class="row">
+    <div class="trade-data">
         <% @trades.each do |trade| %>
          <div class="col-6">
          <div class="trade-card">
-            Date: <%= trade.date %> | <%=trade.start_currency.name %> to <%= trade.end_currency.name %> | Price: <%= trade.price%> | Volume: <%= trade.volume %> | Total Value: <%= trade.total_value%>| Amount Tax Free: <%= trade.amount_tax_free %>
+            📆 Date: <%= trade.date %> | 💰 <%=trade.start_currency.name %> to <%= trade.end_currency.name %> | Price: <strong><%= trade.price%> €</strong> |
+            <br>
+            Volume: <strong><%= trade.volume %></strong> |
+            Total Value: <strong><%= trade.total_value%>  € </strong>| Amount taxes due: <strong><%= trade.income_tax %> € </strong>
          </div>
         </div>
         <% end %>

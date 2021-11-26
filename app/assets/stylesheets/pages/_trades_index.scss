@@ -10,9 +10,12 @@ h1 {
 .container {
   color: #383D41;
 
-  .row {
+  .trade-data {
     box-sizing: border-box;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .trade-card {
