@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <h2 class="text-center"> <%= @user.username %>'s Page </h2>
+  <h2 class="text-center"> <%= @user.username %> </h2>
     <div class="card">
       <div class="container">
         <strong> ⭐️ Score: <%= @user.score %></strong> <small>Ledger:<%= @user.ledger_address %></small>
@@ -15,7 +15,6 @@
     <% else %>
       <h4>Look at your beautiful page</h4>
       <div class="card">
-        <p>This is your own page</p>
       </div>
     <% end %>
 </div>
