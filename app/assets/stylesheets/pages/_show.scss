@@ -25,6 +25,13 @@ text-align: center;
 
 }
 
+a {
+  color: #181C1F;
+  text-decoration: none;
+  &:hover{
+      color: rgb(175, 175, 175) !important;
+}
+}
 
 
 
