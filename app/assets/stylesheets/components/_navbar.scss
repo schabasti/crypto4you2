@@ -8,6 +8,13 @@
   a.nav-link {
     font-size: 20px;
     color: white;
+    &:hover{
+      color: rgb(175, 175, 175) !important;
+    }
+  }
+
+  a.nav-link:hover {
+    opacity: white;
   }
 
   .navbar-collapse {
