@@ -1,0 +1,12 @@
+<div class="container upload-container">
+  <h1>Upload your CSV file</h1>
+  <div class="upload-card">
+    <%= form_with do |form| %>
+      <%= form.file_field :trades %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+</div>
+
+<%# , value: <i class="fas fa-plus"></i> %>
+<%# label: <i class="fas fa-plus-square"></i> %>

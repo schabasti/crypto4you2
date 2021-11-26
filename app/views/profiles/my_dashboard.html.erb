@@ -10,12 +10,12 @@
           <ul>
             <hr>
             <% @trades.each do |trade| %>
-            <li> <%= trade.date %> | <%= trade.volume %> of <%= trade.start_currency.name %></li>
+            <li> <%= trade.date %> | Value: <%= trade.total_value %> € | <%= trade.end_currency.name %> | Tax: <%= trade.income_tax %> €</li>
             <hr>
             <%end  %>
           </ul>
           <div class="text-center">
-            <%= link_to "View More", trade_path(current_user), class: "btn btn-secondary" %>
+            <%= link_to "View More", trades_path, class: "btn btn-success" %>
           </div>
         </div>
         <div class="dashboard-left-chart">
@@ -26,22 +26,17 @@
           <div class="card-chart">
             <canvas
               data-controller="chart"
-              data-chart-data-value='{
-                 "labels": ["Ethereum", "Bitcoin", "Solana", "Dogecoin", "Polkadot"],
-                 "datasets": [{ "label": "My First Trades",
-                 "backgroundColor": "transparent",
-                 "borderColor": "#3B82F6",
-                 "data": [53, 68, 78, 56, 65] }] }'
+              data-chart-data-value="<%= @chart_data.to_json %>"
             ></canvas>
           </div>
         </div>
       </div>
       <div class="dashboard-left-csv-trades">
         <div class="csv-upload">
-          <%= link_to "Upload File", root_path, class: "btn btn-secondary" %>
+          <%= link_to "Upload File", root_path, class: "btn btn-success" %>
         </div>
         <div class="trades-and-taxes">
-          <%= link_to "Your Trades and Taxes", trades_path, class: "btn btn-secondary" %>
+          <%= link_to "Your Trades and Taxes", trades_path, class: "btn btn-success" %>
         </div>
       </div>
     </div>
@@ -52,18 +47,18 @@
           <%= current_user.username %>
           <hr>
         </div>
-        <div class="container">
-        Recent User-Interaction:
-        <ul>
-          <% User.all.each do |user|%>
-          <hr>
-          <li><strong> <%= link_to user.username, user_path(user) %></strong></li>
-          <% end  %>
-          <hr>
-        </ul>
+        <div class="container recent-users">
+          Recent User-Interaction:
+          <ul>
+            <% User.where.not(id: current_user.id).each do |user|%>
+            <hr>
+            <li> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </li>
+            <% end  %>
+            <hr>
+          </ul>
         </div>
         <div class="text-center">
-        <%= link_to "View More", users_path(:id), class: "btn btn-secondary" %>
+        <%= link_to "View More", users_path(:id), class: "btn btn-success" %>
         </div>
       </div>
     </div>

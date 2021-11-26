@@ -2,9 +2,7 @@
 <div class="container">
     <% @users.each do |user| %>
   <div class="user">
-
-
-      <br> <strong> <%= link_to user.username, user_path(user) %> </strong> ⭐️ Score: <%= user.score %> <p> <%= user.bio %> </p>
+      <strong> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </strong> ⭐️ Score: <%= user.score %> <p> "<%= user.bio %>" </p>
   </div>
     <% end %>
 </div>

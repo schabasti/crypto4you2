@@ -30,6 +30,7 @@
     width: 30%;
     padding: 16px;
     margin-right: 10px;
+    font-size: small;
   }
 
   .dashboard-left-chart {
@@ -40,6 +41,9 @@
     overflow:hidden;
     padding: 16px;
     margin-right: 10px;
+  }
+  .card-chart {
+    width: 100%;
   }
 }
 
@@ -78,6 +82,25 @@
     align-items: center;
     padding: 16px;
   }
+
+  .recent-users {
+    a {
+      text-decoration: none;
+      color: white;
+   }
+
+   a:hover {
+     color: white;
+     opacity: .7;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
   .card-profile {
     background-color: $card-color;
     color: $white-font-color;
