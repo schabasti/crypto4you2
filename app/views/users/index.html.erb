@@ -1,8 +1,10 @@
-<h1 class="text-center">All users</h1>
+<h1 class="text-center">Leaderboard</h1>
 <div class="container">
-<ul>
     <% @users.each do |user| %>
-      <li> Username: <%= user.username %> Score: <%= user.score %></li>
+  <div class="user">
+
+
+      <br> <strong> <%= link_to user.username, user_path(user) %> </strong> ⭐️ Score: <%= user.score %> <p> <%= user.bio %> </p>
+  </div>
     <% end %>
-</ul>
 </div>
