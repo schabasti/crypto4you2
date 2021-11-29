@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @conversation = Conversation.between(current_user, @user).first
+    @conversation = helpers.find_or_create_conversation(current_user, @user)
     @message = Message.new
     if @conversation.present?
       @messages = @conversation.messages
