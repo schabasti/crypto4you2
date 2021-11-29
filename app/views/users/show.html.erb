@@ -1,26 +1,23 @@
 <div class="container">
   <br>
   <h2 class="text-center"> <%= @user.username %> </h2>
-    <div class="card">
-      <div class="container">
-        <strong> ⭐️ Score: <%= @user.score %></strong> <small>Ledger:<%= @user.ledger_address %></small>
-        <br>
-        <%= @user.bio %>
-      </div>
+  <div class="card">
+    <div class="container">
+      <%= cl_image_tag @user.photo.key, class: "avatar-medium" %>
+      <strong> ⭐️ Score: <%= @user.score %></strong> <small>Ledger: <%= @user.ledger_address %></small>
+      <br>
+      <%= @user.bio %>
     </div>
-    <br>
-    <br>
-    <% if @user != current_user %>
-      <%= render 'chat' %>
-    <% else %>
-      <h4>Look at your beautiful page</h4>
-      <div class="card">
-      </div>
-    <% end %>
+  </div>
+  <br>
+  <br>
+  <% if @user != current_user %>
+    <%= render 'chat' %>
+  <% else %>
+    <h4>Look at your beautiful page</h4>
+    <div class="card">
+    </div>
+  <% end %>
 </div>
 <br>
 <br>
-
-
-<%# when you send a message -> messages_controler#create (nested in user) %>
-<%# sender= current_user, recipient = @user, conversation between those two / conversation.create if none existing %>

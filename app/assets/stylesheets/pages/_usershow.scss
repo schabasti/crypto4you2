@@ -1,25 +1,32 @@
-h2 {
-  font-family: PT Serif;
-}
-
-h4 {
-  font-family: PT Serif;
-}
-
-.card {
- background-color: #383D41;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-family: PT Serif;
-  padding:10px 10px 10px 10px !important;
-}
-#new_message {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   color: rgb(255, 255, 255);
   margin-bottom: 0;
+}
 
+.card {
+  background-color: #383D41;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding:10px;
+}
+
+.chat-card {
+  padding-top: 0;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.form-control {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.message {
+  padding-top: 10px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
