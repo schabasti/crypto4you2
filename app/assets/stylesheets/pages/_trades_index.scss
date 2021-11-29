@@ -1,31 +1,37 @@
-.content-container {
-  background-color: #181C1F;
-}
-
-h1 {
-  color: white;
-  font-family: PT Serif;
-}
-
-.container {
-  color: #383D41;
-
-  .trade-data {
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .trade-card {
-    padding: auto;
-    background-color:  #548E89;
-    margin-bottom: 20px;
+  table {
+    border: 1px solid #F1F1F1;
     border-radius: 8px;
   }
 
-  .col-6 {
+  h1 {
+    color: white;
+    font-family: PT Serif;
     text-align: center;
+    padding: 40px;
   }
-}
+
+  thead {
+    th {
+          text-transform: uppercase;
+          text-align: center;
+          padding: 10px;
+          color: #548E89;
+          border: 1px solid #F1F1F1;
+        }
+  }
+  tbody {
+        tr {
+            border-bottom: 1px solid #F1F1F1;
+            color: #b9b9b9;
+            background-color: #383D41;
+            td {
+                padding: 10px;
+                border: 1px solid #F1F1F1;
+                text-align: center;
+            }
+            th {
+                padding-left: 10px;
+                border: 1px solid #F1F1F1;
+            }
+        }
+    }

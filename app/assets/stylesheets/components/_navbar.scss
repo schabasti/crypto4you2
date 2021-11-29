@@ -5,8 +5,8 @@
   border-bottom: 1px solid #878B93;
   padding: 0px 50px;
 
-  a.nav-link {
-    font-size: 20px;
+  .nav-link {
+    font-size: 18px;
     color: white;
     &:hover{
       color: rgb(175, 175, 175) !important;
@@ -22,8 +22,8 @@
   }
 
   .navbar-brand img {
-    height: 75px;
-    width: 150px;
+    height: 50px;
+    width: 125px;
   }
 }
 .navbar-light .navbar-nav .nav-link {
