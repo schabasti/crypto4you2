@@ -23,6 +23,7 @@ finn_picture = URI.open('https://kitt.lewagon.com/placeholder/users/jfcerdmann')
 finn.photo.attach(io: finn_picture, filename: 'nes.png', content_type: 'image/png')
 finn.save!
 
+
 luis = User.new
 luis.email = "luis@lewagon.org"
 luis.password = "123456"
