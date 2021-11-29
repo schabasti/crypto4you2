@@ -3,7 +3,8 @@
   <h2 class="text-center"> <%= @user.username %> </h2>
   <div class="card">
     <div class="container">
-      <strong> ⭐️ Score: <%= @user.score %></strong> <small>Ledger:<%= @user.ledger_address %></small>
+      <%= cl_image_tag @user.photo.key, class: "avatar-medium" %>
+      <strong> ⭐️ Score: <%= @user.score %></strong> <small>Ledger: <%= @user.ledger_address %></small>
       <br>
       <%= @user.bio %>
     </div>
