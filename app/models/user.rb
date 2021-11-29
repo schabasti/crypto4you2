@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   def calculate_score
-    new_score = trades.sum do
+    new_score = Trade.where(user: self).sum do
       rand(30..49)
     end
     update(score: new_score)
