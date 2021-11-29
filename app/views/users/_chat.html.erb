@@ -1,13 +1,11 @@
 <h4>Your chat</h4>
 <div class="card">
   <% if @messages.any? %>
-    <% @messages.each do |message|%>
-      <small>
-      <strong> <%= message.user.username%> </strong>
-        <i> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </i>
-      </small>
-      <%= message.content %>
-    <%end %>
+    <div class="messages", data-controller="conversation-subscription",  data-conversation-subscription-conversation-id-value="<%= @conversation.id %>">
+      <% @messages.each do |message|%>
+        <%= render "messages/message", message: message %>
+      <%end %>
+    </div>
   <% else %>
     <p> Start your conversation with <%= @user.username %> </p>
   <% end %>
