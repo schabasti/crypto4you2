@@ -3,15 +3,16 @@ import consumer from "../channels/consumer";
 
 export default class extends Controller {
   static values = { conversationId: Number }
-  static targets = ["noMessages"]
+  static targets = ['input', 'messages']
 
   connect() {
     this.channel = consumer.subscriptions.create(
       { channel: "ConversationChannel", id: this.conversationIdValue },
       { received: data => {
-          console.log(data)
-          this.noMessagesTarget.classList.add("d-none")
-          this.element.insertAdjacentHTML("beforeend", data)
+        console.log(data)
+        console.log(this.inputTarget.value)
+        this.inputTarget.value = ""
+        this.messagesTarget.insertAdjacentHTML("beforeend", data)
         }
       }
     )

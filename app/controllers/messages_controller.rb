@@ -12,7 +12,6 @@ class MessagesController < ApplicationController
       @conversation,
       render_to_string(partial: "message", locals: { message: @message })
     )
-    redirect_to user_path(@user)
   end
 
   private

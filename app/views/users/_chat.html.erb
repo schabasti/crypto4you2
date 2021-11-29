@@ -1,15 +1,15 @@
 <h4>Your chat</h4>
-<div class="card chat-card">
-  <div class="messages", data-controller="conversation-subscription",  data-conversation-subscription-conversation-id-value="<%= @conversation.id %>">
-    <% if @messages.any? %>
-      <% @messages.each do |message|%>
-        <%= render "messages/message", message: message %>
+<div data-controller="conversation-subscription", data-conversation-subscription-conversation-id-value="<%= @conversation.id %>">
+  <div class="card chat-card">
+    <div class="messages" data-conversation-subscription-target="messages">
+      <% if @messages.any? %>
+        <% @messages.each do |message|%>
+          <%= render "messages/message", message: message %>
+        <%end %>
       <%end %>
-    <% else %>
-      <p data-conversation-subscription-target="noMessages"> Start your conversation with <%= @user.username %> </p>
-    <% end %>
+    </div>
   </div>
-</div>
   <%= simple_form_for [@user, @message] do |f| %>
-    <%= f.input :content, as: :string, label: false %>
+    <%= f.input :content, as: :string, label: false, input_html: { 'data-conversation-subscription-target': 'input' } %>
   <% end %>
+</div>
