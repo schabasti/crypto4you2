@@ -199,54 +199,66 @@ dollar = Currency.new
 dollar.name = "US-Dollar"
 dollar.description = "The United States dollar, or U.S. dollar, is made up of 100 cents. It is represented by the symbol $ or US$ to differentiate it from other dollar-based currencies. The U.S. dollar is considered a benchmark currency and is the most-used currency in transactions across the world."
 dollar.is_crypto = false
+dollar.symbol = "USD"
 dollar.save!
 
 euro = Currency.new
 euro.name = "Euro"
 euro.description = "The euro is the official currency of 19 member nations of the European Economic and Monetary Union (EMU), or EU, which is comprised of 27 member nations."
 euro.is_crypto = false
+euro.symbol = "EUR"
 euro.save!
 
 bitcoin = Currency.new
 bitcoin.name = "Bitcoin"
 bitcoin.description = "Bitcoin is a decentralized digital currency created in January 2009. Bitcoin is known as a type of cryptocurrency because it uses cryptography to keep it secure. There are no physical bitcoins, only balances kept on a public ledger that everyone has transparent access to (although each record is encrypted)."
 bitcoin.is_crypto = true
+bitcoin.symbol = "BTC"
 bitcoin.save!
 
 ethereum = Currency.new
 ethereum.name = "Ethereum"
 ethereum.description = "Ethereum is a blockchain platform with its own cryptocurrency, called Ether (ETH) or Ethereum, and its own programming language, called Solidity. As a blockchain network, Ethereum is a decentralized public ledger for verifying and recording transactions. The network's users can create, publish, monetize, and use applications on the platform, and use its Ether cryptocurrency as payment. Insiders call the decentralized applications on the network 'dApps'. As a cryptocurrency, Ethereum is second in market value only to Bitcoin, as of May 2021."
 ethereum.is_crypto = true
+ethereum.symbol = "ETH"
 ethereum.save!
 
 dogecoin = Currency.new
 dogecoin.name = "Dogecoin"
 dogecoin.description = "Dogecoin (DOGE) is a peer-to-peer, open-source cryptocurrency. It is considered an altcoin and an almost sarcastic meme coin. While it was created seemingly as a joke, Dogecoin's blockchain still has merit. Its underlying technology is derived from Litecoin."
 dogecoin.is_crypto = true
+dogecoin.symbol = "DOGE"
 dogecoin.save!
+
+
+CurrencyService.new.update_current_values
 
 binancecoin = Currency.new
 binancecoin.name = "Binance Coin"
 binancecoin.description = "Binance Coin is the cryptocurrency issued by Binance, among the largest crypto exchanges in the world. While originally created as a token to pay for discounted trades, Binance Coin can now be used for payments as well as purchasing various goods and services."
 binancecoin.is_crypto = true
+binancecoin.symbol = "BNB"
 binancecoin.save!
 
 cardano = Currency.new
 cardano.name = "Cardano"
 cardano.description = "Cardano is the cryptocurrency platform behind ada, the name of the currency. Created by the co-founder of Ethereum, Cardano also uses smart contracts, enabling identity management."
 cardano.is_crypto = true
+cardano.symbol = "ADA"
 cardano.save!
 
-solano = Currency.new
-solano.name = "Solano"
-solano.description = "Launched in March 2020, Solana is a newer cryptocurrency and it touts its speed at completing transactions and the overall robustness of its “web-scale” platform. The issuance of the currency, called SOL, is capped at 480 million coins."
-solano.is_crypto = true
-solano.save!
+solana = Currency.new
+solana.name = "Solana"
+solana.description = "Launched in March 2020, Solana is a newer cryptocurrency and it touts its speed at completing transactions and the overall robustness of its “web-scale” platform. The issuance of the currency, called SOL, is capped at 480 million coins."
+solana.is_crypto = true
+solana.symbol = "SOL"
+solana.save!
 
 xrp = Currency.new
 xrp.name = "XRP"
 xrp.description = "Formerly known as Ripple and created in 2012, XRP offers a way to pay in many different real-world currencies. Ripple can be useful in cross-border transactions and uses a trust-less mechanism to facilitate payments."
 xrp.is_crypto = true
+xrp.symbol = "XRP"
 xrp.save!
 
 puts "Creating user currencies..."
@@ -309,19 +321,19 @@ sebastian_ethereum.currency = ethereum
 sebastian_ethereum.save!
 
 sebastian_bitcoin = UserCurrency.new
-sebastian_bitcoin.amount = 7.14
+sebastian_bitcoin.amount = 3.14
 sebastian_bitcoin.user = sebastian
 sebastian_bitcoin.currency = bitcoin
 sebastian_bitcoin.save!
 
 sebastian_dogecoin = UserCurrency.new
-sebastian_dogecoin.amount = 867.89
+sebastian_dogecoin.amount = 3_867.89
 sebastian_dogecoin.user = sebastian
 sebastian_dogecoin.currency = dogecoin
 sebastian_dogecoin.save!
 
 sebastian_binancecoin = UserCurrency.new
-sebastian_binancecoin.amount = 1.65
+sebastian_binancecoin.amount = 150
 sebastian_binancecoin.user = sebastian
 sebastian_binancecoin.currency = binancecoin
 sebastian_binancecoin.save!
@@ -332,11 +344,11 @@ sebastian_cardano.user = sebastian
 sebastian_cardano.currency = cardano
 sebastian_cardano.save!
 
-sebastian_solano = UserCurrency.new
-sebastian_solano.amount = 81.07
-sebastian_solano.user = sebastian
-sebastian_solano.currency = solano
-sebastian_solano.save!
+sebastian_solana = UserCurrency.new
+sebastian_solana.amount = 81.07
+sebastian_solana.user = sebastian
+sebastian_solana.currency = solana
+sebastian_solana.save!
 
 sebastian_xrp = UserCurrency.new
 sebastian_xrp.amount = 467.92
@@ -363,11 +375,11 @@ marcus_cardano.user = marcus
 marcus_cardano.currency = cardano
 marcus_cardano.save!
 
-marcus_solano = UserCurrency.new
-marcus_solano.amount = 3.78
-marcus_solano.user = marcus
-marcus_solano.currency = solano
-marcus_solano.save!
+marcus_solana = UserCurrency.new
+marcus_solana.amount = 33.78
+marcus_solana.user = marcus
+marcus_solana.currency = solana
+marcus_solana.save!
 
 # Peters coins
 peter_ethereum = UserCurrency.new
@@ -377,7 +389,7 @@ peter_ethereum.currency = ethereum
 peter_ethereum.save!
 
 peter_bitcoin = UserCurrency.new
-peter_bitcoin.amount = 129.42
+peter_bitcoin.amount = 8.42
 peter_bitcoin.user = peter
 peter_bitcoin.currency = bitcoin
 peter_bitcoin.save!
@@ -400,11 +412,11 @@ peter_cardano.user = peter
 peter_cardano.currency = cardano
 peter_cardano.save!
 
-peter_solano = UserCurrency.new
-peter_solano.amount = 198.36
-peter_solano.user = peter
-peter_solano.currency = solano
-peter_solano.save!
+peter_solana = UserCurrency.new
+peter_solana.amount = 198.36
+peter_solana.user = peter
+peter_solana.currency = solana
+peter_solana.save!
 
 peter_xrp = UserCurrency.new
 peter_xrp.amount = 25_129.76
@@ -413,11 +425,11 @@ peter_xrp.currency = xrp
 peter_xrp.save!
 
 # Maja coins
-maja_solano = UserCurrency.new
-maja_solano.amount = 203.45
-maja_solano.user = maja
-maja_solano.currency = solano
-maja_solano.save!
+maja_solana = UserCurrency.new
+maja_solana.amount = 203.45
+maja_solana.user = maja
+maja_solana.currency = solana
+maja_solana.save!
 
 maja_xrp = UserCurrency.new
 maja_xrp.amount = 3.56
