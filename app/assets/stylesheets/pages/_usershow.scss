@@ -1,6 +1,12 @@
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   color: rgb(255, 255, 255);
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 .card {
@@ -21,6 +27,11 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+.chat-card .messages {
+  max-height: 60vh;
+  overflow-y: scroll;
 }
 
 .message {

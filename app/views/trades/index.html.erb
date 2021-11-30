@@ -1,27 +1,29 @@
-<h1>Trades and Taxes</h1>
-<div class="d-flex justify-content-center">
-    <table>
-      <thead>
-        <tr>
-          <th>📆 Date</th>
-          <th>💰 currency name</th>
-          <th>Price</th>
-          <th>Volume</th>
-          <th>Total Value</th>
-          <th>Amount taxes due</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @trades.each do |trade| %>
+<div class="container index-container">
+  <h1>Trades and Taxes</h1>
+  <div class="d-flex justify-content-center">
+      <table>
+        <thead>
           <tr>
-            <td><%= trade.date %></td>
-            <td> <%=trade.start_currency.name %> to <%= trade.end_currency.name %></td>
-            <td><strong><%= trade.price%> €</strong></td>
-            <td><strong><%= trade.volume %></strong></td>
-            <td><strong><%= trade.total_value%>  € </strong></td>
-            <td><strong><%= trade.income_tax %> € </strong></td>
+            <th>📆 Date</th>
+            <th>💰 currency name</th>
+            <th>Price</th>
+            <th>Volume</th>
+            <th>Total Value</th>
+            <th>Amount taxes due</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @trades.each do |trade| %>
+            <tr>
+              <td><%= trade.date %></td>
+              <td> <%=trade.start_currency.name %> to <%= trade.end_currency.name %></td>
+              <td><strong><%= trade.price%> €</strong></td>
+              <td><strong><%= trade.volume %></strong></td>
+              <td><strong><%= trade.total_value%>  € </strong></td>
+              <td><strong><%= trade.income_tax %> € </strong></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
 </div>
