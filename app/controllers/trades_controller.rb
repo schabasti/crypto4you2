@@ -1,6 +1,6 @@
 class TradesController < ApplicationController
   def index
-    @trades = Trade.all
+    @trades = Trade.where(user: current_user)
   end
 
   def show
