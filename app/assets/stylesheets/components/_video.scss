@@ -1,0 +1,96 @@
+.video-call {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.call-video-views {
+  position: relative;
+  height: 100%;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.no-call {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.waiting-for-buddy {
+  color: white;
+}
+
+.call-buttons {
+  margin: 1rem 0;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-around;
+
+  .call-button {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+
+  .call-button:hover {
+    box-shadow: 0 0 12px rgba(0,0,0, 0.3);
+  }
+}
+
+.btn-start-call {
+  color: white !important;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.btn-end-call {
+  background-color: $red;
+  color: white !important;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+#local-video {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  video {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+  }
+}
+
+#remote-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  video {
+    width: 600px;
+    height: 600px;
+    border-radius: 8px;
+  }
+}
+
+.modal-content {
+  color: white;
+  background-color: #181C1F;
+}

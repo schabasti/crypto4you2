@@ -12,13 +12,17 @@
   <br>
   <br>
   <% if @user != current_user %>
+    <div class="chat-header">
+      <h4>Your chat </h4>
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal">
+        Start your call now  <i class="fas fa-video"></i>
+      </button>
+    </div>
     <%= render 'users/chat' %>
-    <%= render 'users/video', twilio_token: @twilio_jwt, room_id: @room_id %>
+    <%= render 'users/video' %>
   <% else %>
     <h4>Look at your beautiful page</h4>
     <div class="card">
     </div>
   <% end %>
 </div>
-<br>
-<br>
