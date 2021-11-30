@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
 
+gem 'twilio-ruby'
+
 # Photo management
 gem 'cloudinary', '~> 1.16.0'
 gem 'open-uri', '~> 0.2.0'

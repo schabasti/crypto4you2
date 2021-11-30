@@ -1,6 +1,12 @@
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   color: rgb(255, 255, 255);
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 .card {
