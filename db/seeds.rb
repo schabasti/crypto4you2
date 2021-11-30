@@ -270,11 +270,11 @@ finn_dogecoin.user = finn
 finn_dogecoin.currency = dogecoin
 finn_dogecoin.save!
 
-finn_solana = UserCurrency.new
-finn_solana.amount = 102.67
-finn_solana.user = finn
-finn_solana.currency = solana
-finn_solana.save!
+finn_solano = UserCurrency.new
+finn_solano.amount = 102.67
+finn_solano.user = finn
+finn_solano.currency = solano
+finn_solano.save!
 
 finn_xrp = UserCurrency.new
 finn_xrp.amount = 1_002.82
@@ -307,11 +307,11 @@ luis_cardano.user = luis
 luis_cardano.currency = cardano
 luis_cardano.save!
 
-luis_solana = UserCurrency.new
-luis_solana.amount = 40.5
-luis_solana.user = luis
-luis_solana.currency = solana
-luis_solana.save!
+luis_solano = UserCurrency.new
+luis_solano.amount = 4.5
+luis_solano.user = luis
+luis_solano.currency = solano
+luis_solano.save!
 
 # Sebastian coins
 sebastian_ethereum = UserCurrency.new
@@ -550,7 +550,7 @@ trade8.total_value = 8_010.00
 trade8.amount_tax_free = 0
 trade8.user = sebastian
 trade8.start_currency = euro
-trade8.end_currency = solana
+trade8.end_currency = solano
 trade8.save!
 
 trade9 = Trade.new
@@ -563,7 +563,7 @@ trade9.tax_rate = 0.25
 trade9.total_value = 655_620.87
 trade9.amount_tax_free = 0
 trade9.user = sebastian
-trade9.start_currency = solana
+trade9.start_currency = solano
 trade9.end_currency = euro
 trade9.save!
 
@@ -705,7 +705,7 @@ trade19.total_value = 7_048.02
 trade19.amount_tax_free = 0
 trade19.user = peter
 trade19.start_currency = euro
-trade19.end_currency = solana
+trade19.end_currency = solano
 trade19.save!
 
 trade20 = Trade.new
@@ -718,7 +718,7 @@ trade20.tax_rate = 0.25
 trade20.total_value = 1_226_165.82
 trade20.amount_tax_free = 0
 trade20.user = peter
-trade20.start_currency = solano
+trade20.start_currency = solana
 trade20.end_currency = euro
 trade20.save!
 
@@ -848,7 +848,7 @@ trade29.total_value = 543.21
 trade29.amount_tax_free = 0
 trade29.user = maja
 trade29.start_currency = euro
-trade29.end_currency = solana
+trade29.end_currency = solano
 trade29.save!
 
 trade30 = Trade.new
