@@ -13,6 +13,7 @@
   <br>
   <% if @user != current_user %>
     <%= render 'users/chat' %>
+    <%= render 'users/video', twilio_token: @twilio_jwt, room_id: @room_id %>
   <% else %>
     <h4>Look at your beautiful page</h4>
     <div class="card">
