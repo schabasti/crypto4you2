@@ -230,9 +230,6 @@ dogecoin.is_crypto = true
 dogecoin.symbol = "DOGE"
 dogecoin.save!
 
-
-CurrencyService.new.update_current_values
-
 binancecoin = Currency.new
 binancecoin.name = "Binance Coin"
 binancecoin.description = "Binance Coin is the cryptocurrency issued by Binance, among the largest crypto exchanges in the world. While originally created as a token to pay for discounted trades, Binance Coin can now be used for payments as well as purchasing various goods and services."
@@ -261,6 +258,7 @@ xrp.is_crypto = true
 xrp.symbol = "XRP"
 xrp.save!
 
+CurrencyService.new.update_current_values
 puts "Creating user currencies..."
 
 # Finn coins
