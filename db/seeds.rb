@@ -165,31 +165,38 @@ dollar = Currency.new
 dollar.name = "US-Dollar"
 dollar.description = "The United States dollar, or U.S. dollar, is made up of 100 cents. It is represented by the symbol $ or US$ to differentiate it from other dollar-based currencies. The U.S. dollar is considered a benchmark currency and is the most-used currency in transactions across the world."
 dollar.is_crypto = false
+dollar.symbol = "USD"
 dollar.save!
 
 euro = Currency.new
 euro.name = "Euro"
 euro.description = "The euro is the official currency of 19 member nations of the European Economic and Monetary Union (EMU), or EU, which is comprised of 27 member nations."
 euro.is_crypto = false
+euro.symbol = "EUR"
 euro.save!
 
 bitcoin = Currency.new
 bitcoin.name = "Bitcoin"
 bitcoin.description = "Bitcoin is a decentralized digital currency created in January 2009. Bitcoin is known as a type of cryptocurrency because it uses cryptography to keep it secure. There are no physical bitcoins, only balances kept on a public ledger that everyone has transparent access to (although each record is encrypted)."
 bitcoin.is_crypto = true
+bitcoin.symbol = "BTC"
 bitcoin.save!
 
 ethereum = Currency.new
 ethereum.name = "Ethereum"
 ethereum.description = "Ethereum is a blockchain platform with its own cryptocurrency, called Ether (ETH) or Ethereum, and its own programming language, called Solidity. As a blockchain network, Ethereum is a decentralized public ledger for verifying and recording transactions. The network's users can create, publish, monetize, and use applications on the platform, and use its Ether cryptocurrency as payment. Insiders call the decentralized applications on the network 'dApps'. As a cryptocurrency, Ethereum is second in market value only to Bitcoin, as of May 2021."
 ethereum.is_crypto = true
+ethereum.symbol = "ETH"
 ethereum.save!
 
 dogecoin = Currency.new
 dogecoin.name = "Dogecoin"
 dogecoin.description = "Dogecoin (DOGE) is a peer-to-peer, open-source cryptocurrency. It is considered an altcoin and an almost sarcastic meme coin. While it was created seemingly as a joke, Dogecoin's blockchain still has merit. Its underlying technology is derived from Litecoin."
 dogecoin.is_crypto = true
+dogecoin.symbol = "DOGE"
 dogecoin.save!
+
+CurrencyService.new.update_current_values
 
 puts "Creating user currencies..."
 

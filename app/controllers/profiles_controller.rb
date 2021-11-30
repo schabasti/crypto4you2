@@ -8,8 +8,8 @@ class ProfilesController < ApplicationController
     labels = current_user.user_currencies.map do |coins|
       coins.currency.name
     end
-    datas = current_user.user_currencies.map do |coins|
-      coins.amount
+    datas = current_user.user_currencies.map do |uc|
+      uc.amount * uc.currency.current_euro_value
     end
     @chart_data = {
       labels: labels,
