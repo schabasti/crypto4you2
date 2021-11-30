@@ -3,6 +3,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle"><%= @user.username %></h5>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" aria-label="Close">
+          <span aria-hidden="true"> <i class="fas fa-times"></i> </span>
+        </button>
       </div>
       <div class="modal-body">
         <div class="video-call"
@@ -14,7 +17,7 @@
         <div class="call-video-views">
           <div id="remote-video" data-video-call-target="buddyVideo">
             <div class="no-call" data-video-call-target="noCall">
-              No call in progress. Click 'Call' to connect!
+              Press 'Call' to speak with <strong> <%= @user.username %> </strong>
             </div>
             <div class="waiting-for-buddy d-none"
                   data-video-call-target="awaitingBuddy">
@@ -43,9 +46,6 @@
           <% end %>
         </div>
       </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" >Leave Call</button>
       </div>
     </div>
   </div>
