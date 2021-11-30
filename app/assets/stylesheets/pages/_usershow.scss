@@ -23,6 +23,11 @@
   border-bottom-right-radius: 8px;
 }
 
+.chat-card .messages {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
 .message {
   padding-top: 10px;
 
