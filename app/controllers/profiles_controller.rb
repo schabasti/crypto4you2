@@ -4,12 +4,12 @@ class ProfilesController < ApplicationController
 
   def my_dashboard
     @trades = current_user.trades.order(created_at: :desc)
-    colors = ["#003F5C", "#EC6B56", "#64C2A6", "#58508D", "#EC6B56", "#BC5090", "#FFC154"]
-    labels = current_user.user_currencies.map do |coins|
-      coins.currency.name
+    colors = ["#003F5C", "#EC6B56", "#64C2A6", "#58508D", "#FFA600", "#2D87BB", "#BC5090", "#FFC154", "#FF6361", "#E6F69D", "#AADEA7"]
+    labels = current_user.user_currencies.map do |uc|
+      uc.currency.name
     end
     datas = current_user.user_currencies.map do |uc|
-      uc.amount * uc.currency.current_euro_value
+      (uc.amount * uc.currency.current_euro_value).round(2)
     end
     @chart_data = {
       labels: labels,
