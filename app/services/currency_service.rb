@@ -13,8 +13,9 @@ class CurrencyService
     datas.each do |data|
       symbol = data["symbol"]
       value = data["price"]
+      logo_url = data["logo_url"]
       currency = Currency.find_by(symbol: symbol)
-      currency&.update(current_euro_value: value)
+      currency&.update(current_euro_value: value, logo_url: logo_url)
     end
   end
 
