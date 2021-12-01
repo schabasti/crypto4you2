@@ -13,9 +13,9 @@
           <ul>
             <hr>
             <% current_user.user_currencies.each do |uc| %>
-            <li> <%= uc.currency.name %> | Current Value: <%= uc.currency.current_euro_value.round(2) %> € |
+            <li> <%= uc.currency.name %> | Price: <%= uc.currency.current_euro_value.round(2) %> € |
             <br>
-            Volume: <%= uc.amount %>  | </li>
+            Volume: <%= uc.amount %>  | Value: <% value = uc.currency.current_euro_value.round(2) * uc.amount.round %> <%= value.round(2) %> € </li>
             <hr>
             <%end  %>
           </ul>
