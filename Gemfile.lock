@@ -156,8 +156,6 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
-      racc (~> 1.4)
     open-uri (0.2.0)
       stringio
       time
@@ -291,12 +289,10 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    yaml (0.2.0)
     zeitwerk (2.5.1)
 
 PLATFORMS
   x86_64-darwin-20
-  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
@@ -328,7 +324,6 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
-  yaml
 
 RUBY VERSION
    ruby 2.7.4p191
