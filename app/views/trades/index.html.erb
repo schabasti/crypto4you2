@@ -8,7 +8,8 @@
         <thead>
           <tr>
             <th>📆 Date</th>
-            <th>💰 currency name</th>
+            <th> Ordertype </th>
+            <th>💰 Currency </th>
             <th>Price</th>
             <th>Volume</th>
             <th>Total Value</th>
@@ -19,9 +20,19 @@
           <% @trades.each do |trade| %>
             <tr>
               <td><%= trade.date %></td>
-              <td> <%=trade.start_currency.name %> to <%= trade.end_currency.name %></td>
+              <td><%= trade.type_of_trade %></td>
+              <td> <% if trade.type_of_trade == 'buy' %>
+                      <%= trade.end_currency.name %>
+                    <% elsif trade.type_of_trade == 'sell' %>
+                      <%=trade.start_currency.name %>
+                    <% end %> </td>
               <td><strong><%= trade.price%> €</strong></td>
-              <td><strong><%= trade.volume %></strong></td>
+              <td><strong><%= trade.volume %></strong>
+                          <% if trade.type_of_trade == 'buy' %>
+                            <%= trade.end_currency.symbol %>
+                          <% elsif trade.type_of_trade == 'sell' %>
+                            <%=trade.start_currency.symbol %>
+                          <% end %> </td>
               <td><strong><%= trade.total_value%>  € </strong></td>
               <td><strong><%= trade.income_tax %> € </strong></td>
             </tr>
