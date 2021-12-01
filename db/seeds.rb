@@ -589,8 +589,8 @@ trade11.tax_rate = 0.25
 trade11.total_value = 1_060.00
 trade11.amount_tax_free = 467.76
 trade11.user = sebastian
-trade11.start_currency = euro
-trade11.end_currency = xrp
+trade11.start_currency = xrp
+trade11.end_currency = euro
 trade11.save!
 
 # Peter trades
