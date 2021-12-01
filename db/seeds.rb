@@ -44,7 +44,7 @@ sebastian.email = "sebastian@lewagon.org"
 sebastian.password = "123456"
 sebastian.first_name = "Sebastian"
 sebastian.last_name = "Burkhardt"
-sebastian.username = "sebastianburkhardt"
+sebastian.username = "sebburkhardt"
 sebastian.score = 520
 sebastian.ledger_address = "LU1O3E-C2AF5-TZ5P6A"
 sebastian.bio = "Experienced crypto trader with profain knowledge about Ethereum and some Bitcoin basics"
@@ -288,7 +288,7 @@ luis_ethereum.currency = ethereum
 luis_ethereum.save!
 
 luis_bitcoin = UserCurrency.new
-luis_bitcoin.amount = 3.14
+luis_bitcoin.amount = 0.74
 luis_bitcoin.user = luis
 luis_bitcoin.currency = bitcoin
 luis_bitcoin.save!
@@ -319,19 +319,19 @@ sebastian_ethereum.currency = ethereum
 sebastian_ethereum.save!
 
 sebastian_bitcoin = UserCurrency.new
-sebastian_bitcoin.amount = 3.14
+sebastian_bitcoin.amount = 1.74
 sebastian_bitcoin.user = sebastian
 sebastian_bitcoin.currency = bitcoin
 sebastian_bitcoin.save!
 
 sebastian_dogecoin = UserCurrency.new
-sebastian_dogecoin.amount = 3_867.89
+sebastian_dogecoin.amount = 9_867.89
 sebastian_dogecoin.user = sebastian
 sebastian_dogecoin.currency = dogecoin
 sebastian_dogecoin.save!
 
 sebastian_binancecoin = UserCurrency.new
-sebastian_binancecoin.amount = 150
+sebastian_binancecoin.amount = 15
 sebastian_binancecoin.user = sebastian
 sebastian_binancecoin.currency = binancecoin
 sebastian_binancecoin.save!
@@ -349,7 +349,7 @@ sebastian_solana.currency = solana
 sebastian_solana.save!
 
 sebastian_xrp = UserCurrency.new
-sebastian_xrp.amount = 467.92
+sebastian_xrp.amount = 2_467.92
 sebastian_xrp.user = sebastian
 sebastian_xrp.currency = xrp
 sebastian_xrp.save!
@@ -362,7 +362,7 @@ marcus_ethereum.currency = ethereum
 marcus_ethereum.save!
 
 marcus_bitcoin = UserCurrency.new
-marcus_bitcoin.amount = 0.74
+marcus_bitcoin.amount = 0.64
 marcus_bitcoin.user = marcus
 marcus_bitcoin.currency = bitcoin
 marcus_bitcoin.save!
@@ -387,7 +387,7 @@ peter_ethereum.currency = ethereum
 peter_ethereum.save!
 
 peter_bitcoin = UserCurrency.new
-peter_bitcoin.amount = 8.42
+peter_bitcoin.amount = 1.42
 peter_bitcoin.user = peter
 peter_bitcoin.currency = bitcoin
 peter_bitcoin.save!
@@ -399,7 +399,7 @@ peter_dogecoin.currency = dogecoin
 peter_dogecoin.save!
 
 peter_binancecoin = UserCurrency.new
-peter_binancecoin.amount = 140.93
+peter_binancecoin.amount = 18.93
 peter_binancecoin.user = peter
 peter_binancecoin.currency = binancecoin
 peter_binancecoin.save!
