@@ -1,94 +1,3 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  position: relative;
-}
-
-body {
-  background: #000;
-  color: #fff;
-  height: auto;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-main {
-  background: #111;
-  border: solid 1px #222;
-  padding: 2rem;
-  max-width: 100%;
-  width: 960px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-
-  > * {
-    grid-column: 1 / -1;
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
-p {
-  line-height: 1.8;
-  margin: 1rem 0;
-  color: rgb(158, 166, 184);
-}
-
-h1 {
-  line-height: 1.3;
-  font-size: 5vw;
-  margin: 1rem 0;
-}
-
-h2 {
-  font-size: 4vw;
-  margin: 1rem 0;
-}
-
-h3 {
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-h2.subheader {
-  font-size: 2vw;
-}
-
-section {
-  grid-column: auto;
-}
-
-header {
-  display: grid;
-  align-content: center;
-  grid-column: 1 / -1;
-}
-
-.callout {
-  text-align: center;
-  background-color: #383D41;
-
-  > p {
-    color: white;
-  }
-
-  padding: 1vw 3vw;
-}
-
 .home-animation {
   perspective: 1200px;
   transform-style: preserve-3d;
@@ -112,16 +21,97 @@ header {
     }
   }
 
-  &:after {
-    content: "";
-    background: linear-gradient(to bottom, #000, #0000 20%, #0000 80%, #000);
-    position: absolute;
-    top: 0;
-    left: 0;
+  html,
+  body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  body {
+    background: #000;
+    color: #fff;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
   }
 }
+
+  main {
+    background: #111;
+    border: solid 1px #222;
+    padding: 2rem;
+    max-width: 100%;
+    width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+
+    > * {
+      grid-column: 1 / -1;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.8;
+      margin: 1rem 0;
+      color: rgb(158, 166, 184);
+    }
+
+    h1 {
+      line-height: 1.3;
+      font-size: 5vw;
+      margin: 1rem 0;
+    }
+
+    h2 {
+      font-size: 4vw;
+      margin: 1rem 0;
+    }
+
+    h3 {
+      font-size: 2vw;
+      font-weight: bold;
+    }
+
+    h2.subheader {
+      font-size: 2vw;
+    }
+
+    section {
+      grid-column: auto;
+    }
+
+    header {
+      display: grid;
+      align-content: center;
+      grid-column: 1 / -1;
+    }
+
+    .callout {
+      text-align: center;
+      background-color: #383D41;
+
+      > p {
+        color: white;
+      }
+
+      padding: 1vw 3vw;
+    }
+  }
 
 main {
   transform-origin: top center;
