@@ -38,6 +38,8 @@ class ProfilesController < ApplicationController
         }
       }
     }
+
+    @displayed_users = current_user.last_chat_partners
   end
 
   def upload_csv

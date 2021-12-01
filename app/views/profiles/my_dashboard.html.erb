@@ -52,9 +52,9 @@
         <div class="container recent-users">
           Recent User-Interaction:
           <ul>
-            <% User.where.not(id: current_user.id).each do |user|%>
-            <hr>
-            <li> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </li>
+            <% @displayed_users.each do |user|%>
+              <hr>
+                <li> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </li>
             <% end  %>
             <hr>
           </ul>
