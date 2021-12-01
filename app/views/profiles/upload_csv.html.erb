@@ -1,6 +1,10 @@
+<%= link_to profiles_my_dashboard_path(current_user) do  %>
+  <i class="fas fa-arrow-circle-left arrow-upload-page"></i>
+<% end %>
 <div class="container upload-container">
   <h1>Upload your CSV file</h1>
   <div class="upload-card">
+  <h1>Upload your CSV file</h1>
     <%= form_with do |form| %>
       <%= form.file_field :trades %>
       <%= form.submit %>

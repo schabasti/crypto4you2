@@ -1,5 +1,8 @@
 <div class="container index-container">
-  <h1>Trades and Taxes</h1>
+  <h1 class="mb-5">Trades and Taxes</h1>
+  <%= link_to profiles_my_dashboard_path(current_user), class:"btn-back" do  %>
+  <i class="fas fa-arrow-circle-left arrow"></i>
+  <% end %>
   <div class="d-flex justify-content-center">
       <table>
         <thead>
