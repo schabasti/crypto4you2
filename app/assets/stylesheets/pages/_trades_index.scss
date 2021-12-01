@@ -40,3 +40,26 @@ tbody {
     }
   }
 }
+
+.arrow{
+  font-size: 35px;
+  color: white;
+
+  &:hover {
+    color: #878B93;
+  }
+}
+
+.btn-back {
+  position: absolute;
+  top: 95px;
+}
+.arrow-upload-page {
+  font-size: 35px;
+  color: white;
+  margin: 25px 0px 0px 60px;
+
+  &:hover {
+    color: #878B93;
+  }
+}
