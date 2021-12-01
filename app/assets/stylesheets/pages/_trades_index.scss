@@ -59,7 +59,34 @@ tbody {
   position: absolute;
   top: 95px;
 }
+.btn-back.higher {
+  top: 60px;
+}
+.btn-back.lower {
+  top: 95px;
+}
+
 .arrow-upload-page {
+  font-size: 35px;
+  color: white;
+  margin: 25px 0px 0px 60px;
+
+  &:hover {
+    color: #878B93;
+  }
+}
+
+.arrow-chat {
+  font-size: 35px;
+  color: white;
+  margin: 25px 0px 0px 60px;
+
+  &:hover {
+    color: #878B93;
+  }
+}
+
+.arrow-leaderboard {
   font-size: 35px;
   color: white;
   margin: 25px 0px 0px 60px;

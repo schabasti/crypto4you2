@@ -11,6 +11,10 @@ class ProfilesController < ApplicationController
     datas = current_user.user_currencies.map do |uc|
       (uc.amount * uc.currency.current_euro_value).round(2)
     end
+    @total = 0
+    @total = current_user.user_currencies.map do |uc|
+      @total += (uc.amount * uc.currency.current_euro_value).round(2)
+    end
     @chart_data = {
       labels: labels,
       datasets: [{
