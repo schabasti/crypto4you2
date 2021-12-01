@@ -4,5 +4,4 @@ meta_description: "A simple and effective way to highlight your crypto investmen
 We help you to have more transparency over your taxes and to
 simply store your trades in a convenient way to get a great
 review over your trades and taxes."
-meta_image: "banner_picture.png" # should exist in `app/assets/images/`
-
+meta_image: "image.png" # should exist in `app/assets/images/`
