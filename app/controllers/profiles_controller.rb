@@ -38,6 +38,11 @@ class ProfilesController < ApplicationController
         }
       }
     }
+
+    all_users = User.where.not(id: current_user.id)
+    @displayed_users = all_users.select do |user|
+      Conversation.between(current_user, user).first&.messages&.any?
+    end
   end
 
   def upload_csv
