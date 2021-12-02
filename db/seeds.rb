@@ -84,7 +84,7 @@ maja.password = "123456"
 maja.first_name = "Maja"
 maja.last_name = "Kusnezow"
 maja.username = "kusnezow"
-maja.score = 75
+maja.score = 207
 maja.ledger_address = "PE2I-BY51-HP50"
 maja.bio = "Just found crypto4you on Google and want to try it. Looks amazing!"
 maja_picture = URI.open('https://st3.depositphotos.com/4252389/i/600/depositphotos_355244198-stock-photo-portrait-successful-business-woman-active.jpg')
@@ -142,6 +142,45 @@ mehmet.bio = "Started investing with BTC in 2014 as a joke. But now I can't beli
 mehmet_picture = URI.open('https://pbs.twimg.com/profile_images/1318306117190078464/6DDKctbf_400x400.jpg')
 mehmet.photo.attach(io: mehmet_picture, filename: 'nes.png', content_type: 'image/png')
 mehmet.save!
+
+ludwig = User.new
+ludwig.email = "ludwig@lewagon.org"
+ludwig.password = "123456"
+ludwig.first_name = "Ludwig"
+ludwig.last_name = "Bayern"
+ludwig.username = "kaiserludwig"
+ludwig.score = 427
+ludwig.ledger_address = "1U97-8F3U-PF5Q"
+ludwig.bio = "Originally from Munich (Bavaria) I am now living in San Francisco and exploring the Sillicon Valley. #Tesla #ETH #Dogecoin"
+ludwig_picture = URI.open('https://www.mona.uwi.edu/modlang/sites/default/files/modlang/male-avatar-placeholder.png')
+ludwig.photo.attach(io: ludwig_picture, filename: 'nes.png', content_type: 'image/png')
+ludwig.save!
+
+chidima = User.new
+chidima.email = "chidima@lewagon.org"
+chidima.password = "123456"
+chidima.first_name = "Chidima"
+chidima.last_name = "Abou Nasser"
+chidima.username = "teacher_chidima"
+chidima.score = 551
+chidima.ledger_address = "92I1-HT2P-V48T"
+chidima.bio = "Crypto is finally a chance for everyone to profit from its huge margins while investing small amount. Everyone that wants to learn more, text me!"
+chidima_picture = URI.open('https://new.in-24.com/entertainment/content/uploads/2021/10/13/9dc8321c12.jpg')
+chidima.photo.attach(io: chidima_picture, filename: 'nes.png', content_type: 'image/png')
+chidima.save!
+
+luisa = User.new
+luisa.email = "luisa@lewagon.org"
+luisa.password = "123456"
+luisa.first_name = "Luisa"
+luisa.last_name = "Neubaur"
+luisa.username = "luisa97"
+luisa.score = 91
+luisa.ledger_address = "06UZ-UH41-85GE"
+luisa.bio = "Climate neutral investments is the only option we have for the future. Crypto is not perfect but it's a good start. #FFF"
+luisa_picture = URI.open('https://www.kindernetz.de/wissen/1633675856588,luisa-neubauer-portrait-bild-102~_v-ARD@2dvideoweb1x1l_-956e359923b95ad2dacffdf49b54c7d85b78bfba.jpg')
+luisa.photo.attach(io: luisa_picture, filename: 'nes.png', content_type: 'image/png')
+luisa.save!
 
 # Seeding Conversations and messages
 puts "Creating conversations..."
