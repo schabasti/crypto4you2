@@ -25,13 +25,15 @@
             <h3 class="text-center">Portfolio Mix</h3>
             <h6 class="text-center"><%= Date.current%></h6>
           </div>
-          <div class="card-chart">
+          <div class="card-chart"
+                style="position: relative; height: 60vh; width: 45vw"
+                data-controller="chart"
+                data-chart-data-value="<%= @chart_data.to_json %>"
+                data-chart-type-value="pie"
+                data-chart-options-value="<%= @chart_options.to_json %>"
+                >
             <canvas
-              data-controller="chart"
-              data-chart-data-value="<%= @chart_data.to_json %>"
-              data-chart-type-value="pie"
-              data-chart-options-value="<%= @chart_options.to_json %>"
-            ></canvas>
+             data-chart-target="canvas"></canvas>
           </div>
         </div>
       </div>
