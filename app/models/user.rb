@@ -16,10 +16,9 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   def calculate_score
-    new_score = Trade.where(user: self).sum do
+    Trade.where(user: self).sum do
       rand(30..49)
     end
-    update(score: new_score)
   end
 
   def last_messages(count = 100)

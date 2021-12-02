@@ -18,7 +18,7 @@ finn.password = "123456"
 finn.first_name = "Finn"
 finn.last_name = "Erdmann"
 finn.username = "finnerdmann"
-finn.score = 350
+finn.score = 135
 finn.ledger_address = "LTAQ2F-HV3UG-0PO1ZC"
 finn.bio = "Crypto enthusiast with a nodge for risky coins #dogecoin #tothemoon"
 finn_picture = URI.open('https://kitt.lewagon.com/placeholder/users/jfcerdmann')
@@ -32,7 +32,7 @@ luis.password = "123456"
 luis.first_name = "Luis"
 luis.last_name = "Kohl"
 luis.username = "luiskohl"
-luis.score = 460
+luis.score = 249
 luis.ledger_address = "L1Y2PL-Q42WJ-Q19IUP"
 luis.bio = "I've been investing in crypto since four years and am open to help anyone who is new to this amazing world #eth"
 luis_picture = URI.open('https://kitt.lewagon.com/placeholder/users/code7756221432')
@@ -58,7 +58,7 @@ marcus.password = "123456"
 marcus.first_name = "Marcus"
 marcus.last_name = "Wrede"
 marcus.username = "marcuswrede"
-marcus.score = 195
+marcus.score = 93
 marcus.ledger_address = "LAR4MS-QW4UT-J13L7D"
 marcus.bio = "Relatively new to the world of crypto and looking for more serious investment opportunities"
 marcus_picture = URI.open('https://kitt.lewagon.com/placeholder/users/wredemarcus')
@@ -71,10 +71,10 @@ peter.password = "123456"
 peter.first_name = "Peter"
 peter.last_name = "Müller"
 peter.username = "cryptopeter"
-peter.score = 195
+peter.score = 835
 peter.ledger_address = "LRL7D-RPUT-J05D"
 peter.bio = "Hooked on crypto since Day 1. If you want to know anything let me know, I am an expert 😎"
-peter_picture = URI.open('https://kitt.lewagon.com/placeholder/users/random')
+peter_picture = URI.open('https://founders-magazin.de/wp-content/uploads/2020/03/Design-ohne-Titel-34.png')
 peter.photo.attach(io: peter_picture, filename: 'nes.png', content_type: 'image/png')
 peter.save!
 
@@ -84,12 +84,103 @@ maja.password = "123456"
 maja.first_name = "Maja"
 maja.last_name = "Kusnezow"
 maja.username = "kusnezow"
-maja.score = 800
+maja.score = 207
 maja.ledger_address = "PE2I-BY51-HP50"
 maja.bio = "Just found crypto4you on Google and want to try it. Looks amazing!"
-maja_picture = URI.open('https://kitt.lewagon.com/placeholder/users/random')
+maja_picture = URI.open('https://st3.depositphotos.com/4252389/i/600/depositphotos_355244198-stock-photo-portrait-successful-business-woman-active.jpg')
 maja.photo.attach(io: maja_picture, filename: 'nes.png', content_type: 'image/png')
 maja.save!
+
+max = User.new
+max.email = "max@lewagon.org"
+max.password = "123456"
+max.first_name = "Max"
+max.last_name = "Mustermann"
+max.username = "max_trading"
+max.score = 348
+max.ledger_address = "RT15-PQ7Z-H150"
+max.bio = "I have been investing in crypto in my free time since several years and I am looking forward to learn more."
+max_picture = URI.open('https://www.lifefinance.de/wp-content/uploads/2016/12/max-mustermann.jpg')
+max.photo.attach(io: max_picture, filename: 'nes.png', content_type: 'image/png')
+max.save!
+
+anna = User.new
+anna.email = "anna@lewagon.org"
+anna.password = "123456"
+anna.first_name = "Anna"
+anna.last_name = "Müller"
+anna.username = "trade199305"
+anna.score = 211
+anna.ledger_address = "R10Y-PQ7Z-L3QA"
+anna.bio = "I love crypto investments because of the anonymity and huge profit chances."
+anna_picture = URI.open('https://avatarairlines.com/wp-content/uploads/2020/05/Female-Placeholder.png')
+anna.photo.attach(io: anna_picture, filename: 'nes.png', content_type: 'image/png')
+anna.save!
+
+jamal = User.new
+jamal.email = "jamal@lewagon.org"
+jamal.password = "123456"
+jamal.first_name = "Jamal"
+jamal.last_name = "Musiala"
+jamal.username = "jamal1998"
+jamal.score = 78
+jamal.ledger_address = "LO51-AH98-41PO"
+jamal.bio = "Just finished my Masters and a crypto newbie. Super interested in Ethereum!"
+jamal_picture = URI.open('https://www.humanityinaction.org/wp-content/uploads/2019/04/20_-jamal-grant.png')
+jamal.photo.attach(io: jamal_picture, filename: 'nes.png', content_type: 'image/png')
+jamal.save!
+
+mehmet = User.new
+mehmet.email = "mehmet@lewagon.org"
+mehmet.password = "123456"
+mehmet.first_name = "Mehmet"
+mehmet.last_name = "Okumus"
+mehmet.username = "okumusmehmet"
+mehmet.score = 389
+mehmet.ledger_address = "OQ71-4G3U-001P"
+mehmet.bio = "Started investing with BTC in 2014 as a joke. But now I can't believe that so many people still don't do it."
+mehmet_picture = URI.open('https://pbs.twimg.com/profile_images/1318306117190078464/6DDKctbf_400x400.jpg')
+mehmet.photo.attach(io: mehmet_picture, filename: 'nes.png', content_type: 'image/png')
+mehmet.save!
+
+ludwig = User.new
+ludwig.email = "ludwig@lewagon.org"
+ludwig.password = "123456"
+ludwig.first_name = "Ludwig"
+ludwig.last_name = "Bayern"
+ludwig.username = "kaiserludwig"
+ludwig.score = 427
+ludwig.ledger_address = "1U97-8F3U-PF5Q"
+ludwig.bio = "Originally from Munich (Bavaria) I am now living in San Francisco and exploring the Sillicon Valley. #Tesla #ETH #Dogecoin"
+ludwig_picture = URI.open('https://www.mona.uwi.edu/modlang/sites/default/files/modlang/male-avatar-placeholder.png')
+ludwig.photo.attach(io: ludwig_picture, filename: 'nes.png', content_type: 'image/png')
+ludwig.save!
+
+chidima = User.new
+chidima.email = "chidima@lewagon.org"
+chidima.password = "123456"
+chidima.first_name = "Chidima"
+chidima.last_name = "Abou Nasser"
+chidima.username = "teacher_chidima"
+chidima.score = 551
+chidima.ledger_address = "92I1-HT2P-V48T"
+chidima.bio = "Crypto is finally a chance for everyone to profit from its huge margins while investing small amount. Everyone that wants to learn more, text me!"
+chidima_picture = URI.open('https://new.in-24.com/entertainment/content/uploads/2021/10/13/9dc8321c12.jpg')
+chidima.photo.attach(io: chidima_picture, filename: 'nes.png', content_type: 'image/png')
+chidima.save!
+
+luisa = User.new
+luisa.email = "luisa@lewagon.org"
+luisa.password = "123456"
+luisa.first_name = "Luisa"
+luisa.last_name = "Neubaur"
+luisa.username = "luisa97"
+luisa.score = 91
+luisa.ledger_address = "06UZ-UH41-85GE"
+luisa.bio = "Climate neutral investments is the only option we have for the future. Crypto is not perfect but it's a good start. #FFF"
+luisa_picture = URI.open('https://www.kindernetz.de/wissen/1633675856588,luisa-neubauer-portrait-bild-102~_v-ARD@2dvideoweb1x1l_-956e359923b95ad2dacffdf49b54c7d85b78bfba.jpg')
+luisa.photo.attach(io: luisa_picture, filename: 'nes.png', content_type: 'image/png')
+luisa.save!
 
 # Seeding Conversations and messages
 puts "Creating conversations..."
