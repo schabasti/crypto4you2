@@ -28,15 +28,17 @@
                       <img src="<%= trade.start_currency.logo_url %>" alt="<%=trade.start_currency.symbol %>">
                       - <%=trade.start_currency.name %>
                     <% end %> </td>
-              <td><strong><%= trade.price%> €</strong></td>
+              <td><strong>
+                <%= number_to_currency(trade.price.round(2), unit: "€", format: "%n %u") %>
+              </strong></td>
               <td><strong><%= trade.volume %>  </strong>
                           <% if trade.type_of_trade == 'buy' %>
                             <%=trade.end_currency.symbol %>
                           <% elsif trade.type_of_trade == 'sell' %>
                             <%=trade.start_currency.symbol %>
                           <% end %> </td>
-              <td><strong><%= trade.total_value%>  € </strong></td>
-              <td><strong><%= trade.income_tax %> € </strong></td>
+              <td><strong><%= number_to_currency(trade.total_value, unit: "€", format: "%n %u") %> </strong></td>
+              <td><strong><%= number_to_currency(trade.income_tax, unit: "€", format: "%n %u") %> </strong></td>
             </tr>
           <% end %>
         </tbody>
