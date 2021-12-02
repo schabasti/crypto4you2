@@ -1,11 +1,25 @@
 <%= link_to profiles_my_dashboard_path(current_user), class:"btn-back lower" do  %>
   <i class="fas fa-arrow-circle-left arrow-leaderboard"></i>
 <% end %>
-<h1 class="text-center">Leaderboard</h1>
+<h1 class="text-center">Crypto4you Leaderboard</h1>
 <div class="container">
-    <% @users.each do |user| %>
-  <div class="user">
-      <strong> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </strong> ⭐️ Score: <%= user.score %> <p> "<%= user.bio %>" </p>
-  </div>
-    <% end %>
+  <h2 class="text-center">Gold status <i class="fas fa-medal gold"></i></h2>
+  <% @gold_users.each do |user| %>
+    <div class="user">
+      <strong> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </strong> ⭐️Score: <%= user.score %> <p> "<%= user.bio %>" </p>
+    </div>
+  <% end %>
+  <h2 class="text-center">Silver status <i class="fas fa-medal silver"></i></h2>
+  <% @silver_users.each do |user| %>
+    <div class="user">
+      <strong> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </strong> ⭐️Score: <%= user.score %> <p> "<%= user.bio %>" </p>
+    </div>
+  <% end %>
+  <h2 class="text-center">Bronze status <i class="fas fa-medal bronze"></i></h2>
+  <% @bronze_users.each do |user| %>
+    <div class="user">
+      <strong> <%= cl_image_tag user.photo.key, class: "avatar-small" %> <%= link_to user.username, user_path(user) %> </strong> ⭐️Score: <%= user.score %> <p> "<%= user.bio %>" </p>
+    </div>
+  <% end %>
+  <br>
 </div>

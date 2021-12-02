@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def index
-    @users = User.order(score: :desc)
+    @gold_users = User.where("score > ?", 400).order(score: :desc)
+    @silver_users = User.where("? < score AND score < ?", 200, 400).order(score: :desc)
+    @bronze_users = User.where("score < ?", 200).order(score: :desc)
   end
 
   def show
