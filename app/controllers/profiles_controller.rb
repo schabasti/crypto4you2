@@ -30,10 +30,11 @@ class ProfilesController < ApplicationController
     # }
     @chart_options = {
       options: {
-        responsive: true,
+        responsive: false,
         plugins: {
           legend: {
-            position: 'top'
+            position: 'top',
+            fullSize: false
           },
           title: {
             display: true,
