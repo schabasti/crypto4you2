@@ -8,14 +8,14 @@
         <div class="dashboard-left-overview">
           <h3 class="text-center">Your Assets</h3>
           <div class="text-center">
-           <h6>Total worth of your Portfolio: <%= @total.sum.round(0) %> €</h6>
+           <h6>Total worth Portfolio: <%= number_to_currency(@total.sum.round(2), :unit => "€", format: "%n %u") %></h6>
           </div>
           <ul>
             <hr>
             <% current_user.user_currencies.each do |uc| %>
-            <li> <%= uc.currency.name %> | Price: <%= uc.currency.current_euro_value.round(2) %> € |
+            <li> <%= uc.currency.name %> | Price: <%= number_to_currency(uc.currency.current_euro_value.round(2), :unit => "€", format: "%n %u") %> |
             <br>
-            Volume: <%= uc.amount %>  | Value: <% value = uc.currency.current_euro_value.round(2) * uc.amount.round %> <%= value.round(2) %> € </li>
+            Volume: <%= uc.amount %>  | Value: <% value = uc.currency.current_euro_value.round(2) * uc.amount.round %> <%= number_to_currency(value.round(2), :unit => "€", format: "%n %u") %> </li>
             <hr>
             <%end  %>
           </ul>
