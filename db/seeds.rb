@@ -100,7 +100,7 @@ max.username = "max_trading"
 max.score = 348
 max.ledger_address = "RT15-PQ7Z-H150"
 max.bio = "I have been investing in crypto in my free time since several years and I am looking forward to learn more."
-max_picture = URI.open('https://www.lifefinance.de/wp-content/uploads/2016/12/max-mustermann.jpg')
+max_picture = URI.open('https://thumbs.dreamstime.com/b/flat-avatar-illustration-icon-beard-man-sunglasses-tough-guy-eps-vector-men-dressed-red-blouse-metrosexual-hair-88699969.jpg')
 max.photo.attach(io: max_picture, filename: 'nes.png', content_type: 'image/png')
 max.save!
 
@@ -416,7 +416,7 @@ sebastian_bitcoin.currency = bitcoin
 sebastian_bitcoin.save!
 
 sebastian_dogecoin = UserCurrency.new
-sebastian_dogecoin.amount = 9_867.89
+sebastian_dogecoin.amount = 19_867.89
 sebastian_dogecoin.user = sebastian
 sebastian_dogecoin.currency = dogecoin
 sebastian_dogecoin.save!
@@ -427,11 +427,11 @@ sebastian_binancecoin.user = sebastian
 sebastian_binancecoin.currency = binancecoin
 sebastian_binancecoin.save!
 
-sebastian_cardano = UserCurrency.new
-sebastian_cardano.amount = 2_746.56
-sebastian_cardano.user = sebastian
-sebastian_cardano.currency = cardano
-sebastian_cardano.save!
+# sebastian_cardano = UserCurrency.new
+# sebastian_cardano.amount = 2_746.56
+# sebastian_cardano.user = sebastian
+# sebastian_cardano.currency = cardano
+# sebastian_cardano.save!
 
 sebastian_solana = UserCurrency.new
 sebastian_solana.amount = 81.07
@@ -439,11 +439,11 @@ sebastian_solana.user = sebastian
 sebastian_solana.currency = solana
 sebastian_solana.save!
 
-sebastian_xrp = UserCurrency.new
-sebastian_xrp.amount = 2_467.92
-sebastian_xrp.user = sebastian
-sebastian_xrp.currency = xrp
-sebastian_xrp.save!
+# sebastian_xrp = UserCurrency.new
+# sebastian_xrp.amount = 2_467.92
+# sebastian_xrp.user = sebastian
+# sebastian_xrp.currency = xrp
+# sebastian_xrp.save!
 
 # Marcus coins
 marcus_ethereum = UserCurrency.new
